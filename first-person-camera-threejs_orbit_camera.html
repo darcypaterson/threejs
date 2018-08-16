@@ -31,12 +31,27 @@
 
 			scene.background = new THREE.Color( 0xc9c9c9 );
 
+			var cubeMaterials = [
+
+				new THREE.MeshLambertMaterial( { color: 0xc97171, opacity:0.5, transparent: true, side: THREE.DoubleSide }), // Right Side
+				new THREE.MeshPhongMaterial( { color: 0x71c4c9, opacity:0.5, transparent: true, side: THREE.DoubleSide }), // Left Side
+				new THREE.MeshBasicMaterial( { color: 0xc0c971, opacity:0.5, transparent: true, side: THREE.DoubleSide }),  // Top Side
+				new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader().load('images/eye-1.jpg'), side: THREE.DoubleSide }),  // Bottom Side
+				new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader().load('images/eye-2.jpg'), side: THREE.DoubleSide }),  // Front Side
+				new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader().load('images/eye-3.jpg'), side: THREE.DoubleSide }) // Back Side
+
+			];
+
+
 			// Polygons
 
 			mesh = new THREE.Mesh(
 
+
+
+
 				new THREE.BoxGeometry(1,1,1),
-				new THREE.MeshPhongMaterial({color: 0xff3333, wireframe: false})
+				new THREE.MeshFaceMaterial( cubeMaterials )
 
 
 				);
@@ -47,7 +62,9 @@
 
 			scene.add(mesh);
 
-			meshFloor = new THREE.Mesh(
+
+
+			var meshFloor = new THREE.Mesh(
 
 				new THREE.PlaneGeometry(60,60,10,10),
 				new THREE.MeshPhongMaterial({color:0xffffff, wireframe: false})
@@ -61,7 +78,7 @@
 			scene.add(meshFloor);
 
 
-			wall = new THREE.Mesh(
+			var wall = new THREE.Mesh(
 
 				new THREE.PlaneGeometry(100,70,10,10),
 				new THREE.MeshPhongMaterial({color: 0x59b9e1, wireframe: false})
@@ -75,10 +92,16 @@
 			scene.add(wall);
 
 
-			var loader = new THREE.JSONLoader();
-			loader.load( 'images/volkswagen-touareg.json', function ( geometry, materials ) {
-			    var meshVW = new THREE.Mesh( geometry, new THREE.MeshFaceMaterial( materials ) );
-			    scene.add( meshVW );
+			// var loader = new THREE.JSONLoader();
+			// loader.load( 'images/volkswagen-touareg.json', function ( geometry, materials ) {
+			//     var meshVW = new THREE.Mesh( geometry, new THREE.MeshFaceMaterial( materials ) );
+			//     scene.add( meshVW );
+			// });
+
+
+			var loader = new THREE.ObjectLoader();
+			loader.load("images/volkswagen-touareg.json",function ( obj ) {
+			     scene.add( obj );
 			});
 
 
