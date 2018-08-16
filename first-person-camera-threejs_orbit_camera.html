@@ -92,16 +92,10 @@
 			scene.add(wall);
 
 
-			// var loader = new THREE.JSONLoader();
-			// loader.load( 'images/volkswagen-touareg.json', function ( geometry, materials ) {
-			//     var meshVW = new THREE.Mesh( geometry, new THREE.MeshFaceMaterial( materials ) );
-			//     scene.add( meshVW );
-			// });
-
-
 			var loader = new THREE.ObjectLoader();
 			loader.load("images/volkswagen-touareg.json",function ( obj ) {
 			     scene.add( obj );
+			     loader.scale.set(0.1,0.1,0.1);
 			});
 
 
