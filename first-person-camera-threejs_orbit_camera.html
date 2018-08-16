@@ -94,8 +94,10 @@
 
 			var loader = new THREE.ObjectLoader();
 			loader.load("images/volkswagen-touareg.json",function ( obj ) {
-			     scene.add( obj );
-			     loader.scale.set(0.1,0.1,0.1);
+
+				obj.scale.set(0.1,0.1,0.1);
+			    scene.add( obj );
+
 			});
 
 
