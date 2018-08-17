@@ -89,7 +89,7 @@
 			var wall = new THREE.Mesh(
 
 				new THREE.PlaneGeometry(100,70,10,10),
-				new THREE.MeshPhongMaterial({color: 0x59b9e1, wireframe: false})
+				new THREE.MeshPhongMaterial({ map: new THREE.TextureLoader().load('images/bg.png'), color: 0x59b9e1, wireframe: false})
 
 				);
 
@@ -101,7 +101,7 @@
 			var innerCar = new THREE.Mesh(
 				
 				new THREE.PlaneGeometry(5, 3, 3, 5),
-				new THREE.MeshPhongMaterial({ map: new THREE.TextureLoader().load('images/car-interior.png'), side: THREE.DoubleSide, transparent: true, opacity: 1, color: 0xcfcfcf, wireframe: false})
+				new THREE.MeshPhongMaterial({ map: new THREE.TextureLoader().load('images/car-interior.png'), side: THREE.DoubleSide, transparent: false, opacity: 1, color: 0xcfcfcf, wireframe: false})
 				
 				);
 			
@@ -111,13 +111,26 @@
 			var person = new THREE.Mesh(
 				
 				new THREE.PlaneGeometry(1, 1.75, 1.75, 1),
-				new THREE.MeshPhongMaterial({ map: new THREE.TextureLoader().load('images/person.png'), side: THREE.DoubleSide, transparent: true, opacity: 1, color: 0xcfcfcf, wireframe: false})
+				new THREE.MeshPhongMaterial({ map: new THREE.TextureLoader().load('images/person.png'), side: THREE.DoubleSide, transparent: false, opacity: 1, color: 0xcfcfcf, wireframe: false})
 				
 				);
 			
 			person.position.set(-12.7, -.65, -7);
 			// person.scale.set(0.5, 0.5, 0.5);
 			scene.add(person);
+
+			var stopSign = new THREE.Mesh(
+				
+				new THREE.PlaneGeometry(1, 1.75, 1.75, 1),
+				new THREE.MeshPhongMaterial({ map: new THREE.TextureLoader().load('images/stop-sign.png'), side: THREE.DoubleSide, transparent: false, opacity: 1, color: 0xcfcfcf, wireframe: false})
+				
+				);
+			
+			stopSign.position.set(10.7, -.65, -7);
+			// stopSign.scale.set(0.5, 0.5, 0.5);
+			scene.add(stopSign);
+
+
 
 
 // 			var loader = new THREE.ObjectLoader();
@@ -195,9 +208,9 @@
 			animate();
 
 			controls = new THREE.OrbitControls( camera, renderer.domElement );
-			controls.maxDistance = 6.5;
+			controls.maxDistance = 300;
 			controls.enablePan = false;
-			controls.enableRotate = false;
+			controls.enableRotate = true;
 
 		}
 
