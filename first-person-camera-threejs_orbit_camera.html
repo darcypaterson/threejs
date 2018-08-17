@@ -45,25 +45,25 @@
 
 			// Polygons
 
-			mesh = new THREE.Mesh(
+// 			mesh = new THREE.Mesh(
 
 
 				
 
-				new THREE.BoxGeometry(1,1,1),
-				new THREE.MeshFaceMaterial( cubeMaterials )
+// 				new THREE.BoxGeometry(1,1,1),
+// 				new THREE.MeshFaceMaterial( cubeMaterials )
 
 
 
-				);
+// 				);
 
-			mesh.position.set(0, 1.25, 0);
-			mesh.receiveShadow = true;
-			mesh.castShadow = true;
+// 			mesh.position.set(0, 1.25, 0);
+// 			mesh.receiveShadow = true;
+// 			mesh.castShadow = true;
 
-			mesh.scale.x = 2;
-			mesh.scale.y = 2;
-			mesh.scale.z = 2;
+// 			mesh.scale.x = 2;
+// 			mesh.scale.y = 2;
+// 			mesh.scale.z = 2;
 
 
 // 			scene.add(mesh);
@@ -99,7 +99,7 @@
 			
 			var innerCar = new THREE.Mesh(
 				
-				new THREE.PlaneGeometry(20,10,10,20),
+				new THREE.PlaneGeometry(5, 3, 3, 5),
 				new THREE.MeshPhongMaterial({ map: new THREE.TextureLoader().load('images/car-interior.png'), side: THREE.DoubleSide, color: 0xcfcfcf, wireframe: false})
 				
 				);
@@ -109,7 +109,7 @@
 			
 			var person = new THREE.Mesh(
 				
-				new THREE.PlaneGeometry(5, 10, 10, 5),
+				new THREE.PlaneGeometry(2, 3, 3, 2),
 				new THREE.MeshPhongMaterial({ map: new THREE.TextureLoader().load('images/person.png'), side: THREE.DoubleSide, color: 0xcfcfcf, wireframe: false})
 				
 				);
