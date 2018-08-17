@@ -100,7 +100,7 @@
 			var innerCar = new THREE.Mesh(
 				
 				new THREE.PlaneGeometry(5, 3, 3, 5),
-				new THREE.MeshPhongMaterial({ map: new THREE.TextureLoader().load('images/car-interior.png'), side: THREE.DoubleSide, color: 0xcfcfcf, wireframe: false})
+				new THREE.MeshPhongMaterial({ map: new THREE.TextureLoader().load('images/car-interior.png'), side: THREE.DoubleSide, transparency: true, opacity: 1, color: 0xcfcfcf, wireframe: false})
 				
 				);
 			
@@ -110,7 +110,7 @@
 			var person = new THREE.Mesh(
 				
 				new THREE.PlaneGeometry(2, 3, 3, 2),
-				new THREE.MeshPhongMaterial({ map: new THREE.TextureLoader().load('images/person.png'), side: THREE.DoubleSide, color: 0xcfcfcf, wireframe: false})
+				new THREE.MeshPhongMaterial({ map: new THREE.TextureLoader().load('images/person.png'), side: THREE.DoubleSide, transparency: true, opacity: 1, color: 0xcfcfcf, wireframe: false})
 				
 				);
 			
