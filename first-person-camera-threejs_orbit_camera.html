@@ -96,19 +96,38 @@
 			wall.position.set(0,0,-20);
 			mesh.castShadow = true;
 			scene.add(wall);
+			
+			var innerCar = new THREE.Mesh(
+				
+				new THREE.PlaneGeometry(20,40, 40, 20),
+				new THREE.MeshPhongMaterial({ map: new THREE.TextureLoader().load('images/car-interior.svg'), side: THREE.DoubleSide, color: 0xcfcfcf, wireframe: false})
+				
+				);
+			
+			scene.add(innerCar);
+			
+			var person = new THREE.Mesh(
+				
+				new THREE.PlaneGeometry(10, 20, 20, 10),
+				new THREE.MeshPhongMaterial({ map: new THREE.TextureLoader().load('images/person.svg'), side: THREE.DoubleSide, color: 0xcfcfcf, wireframe: false})
+				
+				);
+			
+			person.position.set(0,0,-10);
+			scene.add(person);
 
 
-			var loader = new THREE.ObjectLoader();
-			loader.load("images/audi-r8-red.json",function ( obj ) {
+// 			var loader = new THREE.ObjectLoader();
+// 			loader.load("images/audi-r8-red.json",function ( obj ) {
 
-				obj.scale.x = 1;
-				obj.scale.y = 1;
-				obj.scale.z = 1;
+// 				obj.scale.x = 1;
+// 				obj.scale.y = 1;
+// 				obj.scale.z = 1;
 
-				obj.rotation.x = Math.PI / 2;
-			    scene.add( obj );
+// 				obj.rotation.x = Math.PI / 2;
+// 			    scene.add( obj );
 
-			});
+// 			});
 
 
 			// Camera
