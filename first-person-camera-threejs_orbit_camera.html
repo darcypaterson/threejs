@@ -115,7 +115,7 @@
 				
 				);
 			
-			person.position.set(-12.55, -.65, -7);
+			person.position.set(-12.7, -.65, -7);
 			// person.scale.set(0.5, 0.5, 0.5);
 			scene.add(person);
 
@@ -195,9 +195,9 @@
 			animate();
 
 			controls = new THREE.OrbitControls( camera, renderer.domElement );
-			controls.maxDistance = 300;
+			controls.maxDistance = 6.5;
 			controls.enablePan = false;
-			controls.enableRotate = true;
+			controls.enableRotate = false;
 
 		}
 
