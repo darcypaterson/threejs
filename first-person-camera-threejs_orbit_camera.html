@@ -73,7 +73,7 @@
 			var meshFloor = new THREE.Mesh(
 
 				new THREE.PlaneGeometry(60,60,10,10),
-				new THREE.MeshPhongMaterial({color:0xffffff, wireframe: true})
+				new THREE.MeshPhongMaterial({color:0x707070, wireframe: false})
 
 				);
 
@@ -115,7 +115,7 @@
 				
 				);
 			
-			person.position.set(-12.6, -.65, -7);
+			person.position.set(-12.8, -.65, -7);
 			// person.scale.set(0.5, 0.5, 0.5);
 			scene.add(person);
 
@@ -142,16 +142,16 @@
 
 			// Lighting
 
-			var light = new THREE.PointLight( 0xffffff, 1, 60, 2 );
+			var light = new THREE.PointLight( 0xffffff, 1, 70, 2 );
 			light.position.set( 0, 1.5, 10 );
 			scene.add( light );
 
-			var light2 = new THREE.PointLight( 0xffffff, 1, 60, 2 );
-			light2.position.set( 0, 1.5, -5 );
+			var light2 = new THREE.PointLight( 0xffffff, 1, 50, 2 );
+			light2.position.set( -11, 7.5, -5 );
 			scene.add( light2 );
 
 			var spotLight = new THREE.SpotLight( 0xffffff, 0.5 );
-			spotLight.position.set( 10, 30, 10 );
+			spotLight.position.set( 10, 70, 10 );
 			spotLight.castShadow = true;
 			spotLight.shadow.mapSize.width = 500;
 			spotLight.shadow.mapSize.height = 500;
