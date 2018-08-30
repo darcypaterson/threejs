@@ -22,7 +22,7 @@
 		var meshFloor;
 
 		var keyboard = {};
-		var player = { height: 0.3, speed: 0.1, turnSpeed: Math.PI * 0.02 };
+		var player = { height: 1.8, speed: 0.1, turnSpeed: Math.PI * 0.02 };
 
 		function init() {
 
@@ -31,150 +31,123 @@
 
 			scene.background = new THREE.Color( 0xc9c9c9 );
 
-			var cubeMaterials = [
+			// var cubeMaterials = [
 
-				new THREE.MeshLambertMaterial( { color: 0xc97171, opacity:0.5, transparent: true, side: THREE.DoubleSide }), // Right Side
-				new THREE.MeshPhongMaterial( { color: 0x71c4c9, opacity:0.5, transparent: true, side: THREE.DoubleSide }), // Left Side
-				new THREE.MeshBasicMaterial( { color: 0xc0c971, opacity:0.5, transparent: true, side: THREE.DoubleSide }),  // Top Side
-				new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader().load('images/eye-1.jpg'), side: THREE.DoubleSide }),  // Bottom Side
-				new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader().load('images/eye-2.jpg'), side: THREE.DoubleSide }),  // Front Side
-				new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader().load('images/eye-3.jpg'), side: THREE.DoubleSide }) // Back Side
+			// 	new THREE.MeshLambertMaterial( { color: 0xc97171, opacity:0.5, transparent: true, side: THREE.DoubleSide }), // Right Side
+			// 	new THREE.MeshPhongMaterial( { color: 0x71c4c9, opacity:0.5, transparent: true, side: THREE.DoubleSide }), // Left Side
+			// 	new THREE.MeshBasicMaterial( { color: 0xc0c971, opacity:0.5, transparent: true, side: THREE.DoubleSide }),  // Top Side
+			// 	new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader().load('images/eye-1.jpg'), side: THREE.DoubleSide }),  // Bottom Side
+			// 	new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader().load('images/eye-2.jpg'), side: THREE.DoubleSide }),  // Front Side
+			// 	new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader().load('images/eye-3.jpg'), side: THREE.DoubleSide }) // Back Side
 
-			];
+			// ];
 
 
 			// Polygons
 
-// 			mesh = new THREE.Mesh(
-
-
-				
-
-// 				new THREE.BoxGeometry(1,1,1),
-// 				new THREE.MeshFaceMaterial( cubeMaterials )
-
-
-
-// 				);
-
-// 			mesh.position.set(0, 1.25, 0);
-// 			mesh.receiveShadow = true;
-// 			mesh.castShadow = true;
-
-// 			mesh.scale.x = 2;
-// 			mesh.scale.y = 2;
-// 			mesh.scale.z = 2;
-
-
-// 			scene.add(mesh);
-
-
-
-			var meshFloor = new THREE.Mesh(
-
-				new THREE.PlaneGeometry(60,60,10,10),
-				new THREE.MeshPhongMaterial({color:0x707070, wireframe: false})
-
-				);
-
-			meshFloor.rotation.x -= Math.PI / 2;
-			meshFloor.position.y = -1.5;
-// 			meshFloor.receiveShadow = true;
-// 			mesh.castShadow = true;
-
-
-			scene.add(meshFloor);
-
-
-			var wall = new THREE.Mesh(
-
-				new THREE.PlaneGeometry(100,70,10,10),
-				new THREE.MeshPhongMaterial({ map: new THREE.TextureLoader().load('images/bg.png'), color: 0x59b9e1, wireframe: false})
-
-				);
-
-// 			wall.receiveShadow = true;
-// 			mesh.castShadow = true;
-			wall.position.set(0,0,-20);			
-			scene.add(wall);
-			
-			var innerCar = new THREE.Mesh(
-				
-				new THREE.PlaneGeometry(5, 3, 3, 5),
-				new THREE.MeshPhongMaterial({ map: new THREE.TextureLoader().load('images/car-interior.png'), side: THREE.DoubleSide, transparent: true, opacity: 1, color: 0xcfcfcf, wireframe: false})
-				
-				);
-			
-			innerCar.position.set(0, 0, 5);
-			scene.add(innerCar);
-			
-			var person = new THREE.Mesh(
-				
-				new THREE.PlaneGeometry(1, 1.75, 1.75, 1),
-				new THREE.MeshPhongMaterial({ map: new THREE.TextureLoader().load('images/person.png'), side: THREE.DoubleSide, transparent: true, opacity: 1, color: 0xcfcfcf, wireframe: false})
-				
-				);
-			
-			person.position.set(-12.5, -.65, -7);
-			// person.scale.set(0.5, 0.5, 0.5);
-			scene.add(person);
-
-			var stopSign = new THREE.Mesh(
-				
-				new THREE.PlaneGeometry(1, 1.75, 1.75, 1),
-				new THREE.MeshPhongMaterial({ map: new THREE.TextureLoader().load('images/stop-sign.png'), side: THREE.DoubleSide, transparent: true, opacity: 1, color: 0xcfcfcf, wireframe: false})
-				
-				);
-			
-			stopSign.position.set(4.7, -.5, 2);
-			stopSign.scale.set(1.1, 1.1, 1.1);
-			scene.add(stopSign);
+			// mesh = new THREE.Mesh(
 
 
 
 
+			// 	new THREE.BoxGeometry(1,1,1),
+			// 	new THREE.MeshFaceMaterial( cubeMaterials )
 
 
 
+			// 	);
+
+			// mesh.position.set(0, 1.25, 0);
+			// mesh.receiveShadow = true;
+			// mesh.castShadow = true;
+
+			// mesh.scale.x = 2;
+			// mesh.scale.y = 2;
+			// mesh.scale.z = 2;
+
+
+			// scene.add(mesh);
+
+
+
+			// var meshFloor = new THREE.Mesh(
+
+			// 	new THREE.PlaneGeometry(60,60,10,10),
+			// 	new THREE.MeshPhongMaterial({color:0xffffff, wireframe: false})
+
+			// 	);
+
+			// meshFloor.rotation.x -= Math.PI / 2;
+			// meshFloor.receiveShadow = true;
+			// mesh.castShadow = true;
+
+			// scene.add(meshFloor);
+
+
+			// var wall = new THREE.Mesh(
+
+			// 	new THREE.PlaneGeometry(100,70,10,10),
+			// 	new THREE.MeshPhongMaterial({color: 0x59b9e1, wireframe: false})
+
+
+			// 	);
+
+			// wall.receiveShadow = true;
+			// wall.position.set(0,0,-20);
+			// mesh.castShadow = true;
+			// scene.add(wall);
+
+
+			var loader = new THREE.JSONLoader();
+			loader.load("export-1.js", function ( obj ) {
+
+				obj.scale.x = 1;
+				obj.scale.y = 1;
+				obj.scale.z = 1;
+
+				// obj.rotation.x = Math.PI / 2;
+			    scene.add( obj );
+
+			});
 
 
 			// Camera
 
-			camera.position.set(0, player.height, 6.5);
+			camera.position.set(0, player.height, 25);
 			// camera.lookAt(new THREE.Vector3(0, player.height, 0));
 
 
 
 			// Lighting
 
-			var light = new THREE.PointLight( 0xffffff, 1, 70, 2 );
-			light.position.set( 0, 1.5, 10 );
-			scene.add( light );
+			// var light = new THREE.PointLight( 0xffffff, 1.3, 50, 2 );
+			// light.position.set( -10, 20, 12 );
+			// scene.add( light );
 
-			var light2 = new THREE.PointLight( 0xffffff, 1, 50, 2 );
-			light2.position.set( -11, 7.5, -5 );
-			scene.add( light2 );
+			// var light2 = new THREE.PointLight( 0xffffff, 1.3, 50, 2 );
+			// light2.position.set( 10, 20, 12 );
+			// scene.add( light2 );
 
-			var spotLight = new THREE.SpotLight( 0xffffff, 0.5 );
-			spotLight.position.set( 10, 70, 10 );
-			spotLight.castShadow = true;
-			spotLight.shadow.mapSize.width = 500;
-			spotLight.shadow.mapSize.height = 500;
-			spotLight.shadow.camera.near = .25;
-			spotLight.shadow.camera.far = 1000;
-			spotLight.shadow.camera.fov = 3;
-			scene.add( spotLight );
+			// var spotLight = new THREE.SpotLight( 0xffffff, 0.1 );
+			// spotLight.position.set( 10, 80, 10 );
+			// spotLight.castShadow = true;
+			// spotLight.shadow.mapSize.width = 500;
+			// spotLight.shadow.mapSize.height = 500;
+			// spotLight.shadow.camera.near = .25;
+			// spotLight.shadow.camera.far = 1000;
+			// spotLight.shadow.camera.fov = 3;
+			// scene.add( spotLight );
 
 
-			var sphereSize = 1;
-			var spotLightHelper = new THREE.SpotLightHelper( spotLight, sphereSize );
-			scene.add( spotLightHelper );
+			// var sphereSize = 1;
+			// var spotLightHelper = new THREE.SpotLightHelper( spotLight, sphereSize );
+			// scene.add( spotLightHelper );
 
-			var pointLightHelper2 = new THREE.PointLightHelper( light2, sphereSize );
-			scene.add( pointLightHelper2 );
+			// var pointLightHelper2 = new THREE.PointLightHelper( light2, sphereSize );
+			// scene.add( pointLightHelper2 );
 
-			var pointLightHelper = new THREE.PointLightHelper( light, sphereSize );
-			scene.add( pointLightHelper );
+			// var pointLightHelper = new THREE.PointLightHelper( light, sphereSize );
+			// scene.add( pointLightHelper );
 
 
 			// Render 
