@@ -46,12 +46,63 @@
 
 			// Polygons
 
+			mesh = new THREE.Mesh(
+
+
+
+
+				new THREE.BoxGeometry(1,1,1),
+				new THREE.MeshFaceMaterial( cubeMaterials )
+
+
+
+				);
+
+			mesh.position.set(0, 1.25, 0);
+			mesh.receiveShadow = true;
+			mesh.castShadow = true;
+
+			mesh.scale.x = 2;
+			mesh.scale.y = 2;
+			mesh.scale.z = 2;
+
+
+			scene.add(mesh);
+
+
+
+			var meshFloor = new THREE.Mesh(
+
+				new THREE.PlaneGeometry(60,60,10,10),
+				new THREE.MeshPhongMaterial({color:0xffffff, wireframe: false})
+
+				);
+
+			meshFloor.rotation.x -= Math.PI / 2;
+			meshFloor.receiveShadow = true;
+			mesh.castShadow = true;
+
+			scene.add(meshFloor);
+
+
+			var wall = new THREE.Mesh(
+
+				new THREE.PlaneGeometry(100,70,10,10),
+				new THREE.MeshPhongMaterial({color: 0x59b9e1, wireframe: false})
+
+
+				);
+
+			wall.receiveShadow = true;
+			wall.position.set(0,0,-20);
+			mesh.castShadow = true;
+			scene.add(wall);
 
 
 			// Loader
 
 				var loader = new THREE.GLTFLoader();
-				loader.load( 'untitled.gltf', function ( gltf ) {
+				loader.load( 'untitled2.gltf', function ( gltf ) {
 					scene.add( gltf.scene );
 				}, undefined, function ( e ) {
 					console.error( e );
