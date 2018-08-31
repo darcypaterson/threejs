@@ -41,12 +41,22 @@
 
 			// Loader
 
-				var loader = new THREE.GLTFLoader();
-				loader.load( 'export-1-new.gltf', function ( gltf ) {
-					scene.add( gltf.scene );
-				}, undefined, function ( e ) {
-					console.error( e );
-				} );
+// 				var loader = new THREE.GLTFLoader();
+// 				loader.load( 'export-1-new.gltf', function ( gltf ) {
+// 					scene.add( gltf.scene );
+// 				}, undefined, function ( e ) {
+// 					console.error( e );
+// 				} );
+
+			
+			var loader = new THREE.GLTFLoader();
+			loader.load("scene-4.gltf", function ( gltf ) {
+
+
+			    scene.add( gltf.scene );
+
+
+			});
 
 
 			// Camera
