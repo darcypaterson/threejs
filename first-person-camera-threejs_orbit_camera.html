@@ -104,6 +104,9 @@
 			var pointLightHelper = new THREE.PointLightHelper( light, sphereSize );
 			scene.add( pointLightHelper );
 
+			var dirhelper = new THREE.DirectionalLightHelper( directionalLight, 5 );
+			scene.add( dirhelper );
+
 
 			// Render 
 
