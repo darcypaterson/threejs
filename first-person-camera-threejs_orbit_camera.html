@@ -60,6 +60,18 @@
 
 			});
 
+			
+			var carLoader = new THREE.GLTFLoader();
+			carLoader.load("car.gltf", function ( gltf ) {
+
+			scene.scale.x = 2;
+			scene.scale.y = 2;
+			scene.scale.z = 2;
+			    scene.add( gltf.scene );
+
+
+			});
+
 
 			// Camera
 
