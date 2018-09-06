@@ -52,7 +52,9 @@
 			var loader = new THREE.GLTFLoader();
 			loader.load("bp-scene-4.gltf", function ( gltf ) {
 
-
+			scene.scale.x = 2;
+			scene.scale.y = 2;
+			scene.scale.z = 2;
 			    scene.add( gltf.scene );
 
 
