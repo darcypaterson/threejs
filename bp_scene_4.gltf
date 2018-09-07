@@ -19577,7 +19577,7 @@
                     },
                     "indices": 310,
                     "mode": 4,
-                    "material": 8
+                    "material": 11
                 }
             ],
             "name": "pCylinder63|pCylinder32|pCylinder39|pCylinderShape39"
@@ -21241,7 +21241,7 @@
                     },
                     "indices": 830,
                     "mode": 4,
-                    "material": 11
+                    "material": 12
                 }
             ],
             "name": "pCylinderShape14"
@@ -21684,7 +21684,7 @@
                     },
                     "indices": 970,
                     "mode": 4,
-                    "material": 12
+                    "material": 13
                 }
             ],
             "name": "pCubeShape75"
@@ -21700,7 +21700,7 @@
                     },
                     "indices": 975,
                     "mode": 4,
-                    "material": 12
+                    "material": 13
                 }
             ],
             "name": "pCubeShape74"
@@ -21830,7 +21830,7 @@
                     },
                     "indices": 1025,
                     "mode": 4,
-                    "material": 13
+                    "material": 14
                 },
                 {
                     "attributes": {
@@ -21841,7 +21841,7 @@
                     },
                     "indices": 1030,
                     "mode": 4,
-                    "material": 14
+                    "material": 15
                 },
                 {
                     "attributes": {
@@ -21879,7 +21879,7 @@
                     },
                     "indices": 1045,
                     "mode": 4,
-                    "material": 13
+                    "material": 14
                 }
             ],
             "name": "pCubeShape69"
@@ -21895,7 +21895,7 @@
                     },
                     "indices": 1050,
                     "mode": 4,
-                    "material": 15
+                    "material": 16
                 }
             ],
             "name": "pCubeShape236"
@@ -21922,7 +21922,7 @@
                     },
                     "indices": 1060,
                     "mode": 4,
-                    "material": 13
+                    "material": 14
                 },
                 {
                     "attributes": {
@@ -21933,7 +21933,7 @@
                     },
                     "indices": 1065,
                     "mode": 4,
-                    "material": 14
+                    "material": 15
                 }
             ],
             "name": "pCube64Shape"
@@ -21981,7 +21981,7 @@
                     },
                     "indices": 1080,
                     "mode": 4,
-                    "material": 16
+                    "material": 17
                 }
             ],
             "name": "pCubeShape3"
@@ -22717,7 +22717,7 @@
                     },
                     "indices": 1335,
                     "mode": 4,
-                    "material": 17
+                    "material": 18
                 }
             ],
             "name": "pCube242Shape"
@@ -22733,7 +22733,7 @@
                     },
                     "indices": 1340,
                     "mode": 4,
-                    "material": 17
+                    "material": 18
                 }
             ],
             "name": "pCube241Shape"
@@ -22776,7 +22776,7 @@
                     },
                     "indices": 1355,
                     "mode": 4,
-                    "material": 15
+                    "material": 16
                 }
             ],
             "name": "pCube239Shape"
@@ -22792,7 +22792,7 @@
                     },
                     "indices": 1360,
                     "mode": 4,
-                    "material": 15
+                    "material": 16
                 }
             ],
             "name": "pCubeShape232"
@@ -22840,7 +22840,7 @@
                     },
                     "indices": 1375,
                     "mode": 4,
-                    "material": 12
+                    "material": 13
                 }
             ],
             "name": "pCubeShape227"
@@ -23919,7 +23919,7 @@
                     },
                     "indices": 1770,
                     "mode": 4,
-                    "material": 13
+                    "material": 14
                 }
             ],
             "name": "pCubeShape190"
@@ -23935,7 +23935,7 @@
                     },
                     "indices": 1775,
                     "mode": 4,
-                    "material": 13
+                    "material": 14
                 }
             ],
             "name": "pCubeShape189"
@@ -23951,7 +23951,7 @@
                     },
                     "indices": 1780,
                     "mode": 4,
-                    "material": 13
+                    "material": 14
                 }
             ],
             "name": "pCubeShape188"
@@ -23967,7 +23967,7 @@
                     },
                     "indices": 1785,
                     "mode": 4,
-                    "material": 13
+                    "material": 14
                 }
             ],
             "name": "pCubeShape187"
@@ -24010,7 +24010,7 @@
                     },
                     "indices": 1800,
                     "mode": 4,
-                    "material": 18
+                    "material": 19
                 }
             ],
             "name": "pCubeShape173"
@@ -24026,7 +24026,7 @@
                     },
                     "indices": 1805,
                     "mode": 4,
-                    "material": 12
+                    "material": 13
                 }
             ],
             "name": "pCubeShape172"
@@ -29818,7 +29818,7 @@
                     },
                     "indices": 3615,
                     "mode": 4,
-                    "material": 19
+                    "material": 20
                 }
             ],
             "name": "pConeShape6"
@@ -29850,7 +29850,7 @@
                     },
                     "indices": 3625,
                     "mode": 4,
-                    "material": 19
+                    "material": 20
                 }
             ],
             "name": "pConeShape5"
@@ -29882,7 +29882,7 @@
                     },
                     "indices": 3635,
                     "mode": 4,
-                    "material": 19
+                    "material": 20
                 }
             ],
             "name": "pConeShape4"
@@ -29914,7 +29914,7 @@
                     },
                     "indices": 3645,
                     "mode": 4,
-                    "material": 19
+                    "material": 20
                 }
             ],
             "name": "pConeShape3"
@@ -29946,7 +29946,7 @@
                     },
                     "indices": 3655,
                     "mode": 4,
-                    "material": 19
+                    "material": 20
                 }
             ],
             "name": "pConeShape2"
@@ -29978,7 +29978,7 @@
                     },
                     "indices": 3665,
                     "mode": 4,
-                    "material": 19
+                    "material": 20
                 }
             ],
             "name": "pConeShape1"
@@ -30010,7 +30010,7 @@
                     },
                     "indices": 3675,
                     "mode": 4,
-                    "material": 20
+                    "material": 21
                 },
                 {
                     "attributes": {
@@ -30021,7 +30021,7 @@
                     },
                     "indices": 3680,
                     "mode": 4,
-                    "material": 21
+                    "material": 22
                 }
             ],
             "name": "pasted__polySurface3|pasted__polySurface1Shape"
@@ -30037,7 +30037,7 @@
                     },
                     "indices": 3685,
                     "mode": 4,
-                    "material": 22
+                    "material": 23
                 }
             ],
             "name": "pPlaneShape5"
@@ -30053,7 +30053,7 @@
                     },
                     "indices": 3690,
                     "mode": 4,
-                    "material": 22
+                    "material": 23
                 }
             ],
             "name": "pPlaneShape4"
@@ -30069,7 +30069,7 @@
                     },
                     "indices": 3695,
                     "mode": 4,
-                    "material": 23
+                    "material": 24
                 }
             ],
             "name": "pCubeShape27"
@@ -30085,7 +30085,7 @@
                     },
                     "indices": 3700,
                     "mode": 4,
-                    "material": 23
+                    "material": 24
                 }
             ],
             "name": "pCubeShape21"
@@ -30101,7 +30101,7 @@
                     },
                     "indices": 3705,
                     "mode": 4,
-                    "material": 24
+                    "material": 25
                 }
             ],
             "name": "pasted__pasted__pasted__pasted__pCubeShape23"
@@ -30117,7 +30117,7 @@
                     },
                     "indices": 3710,
                     "mode": 4,
-                    "material": 24
+                    "material": 25
                 }
             ],
             "name": "pasted__pasted__pasted__pCubeShape24"
@@ -30133,7 +30133,7 @@
                     },
                     "indices": 3715,
                     "mode": 4,
-                    "material": 24
+                    "material": 25
                 }
             ],
             "name": "pasted__pasted__pasted__pCubeShape23"
@@ -30149,7 +30149,7 @@
                     },
                     "indices": 3720,
                     "mode": 4,
-                    "material": 24
+                    "material": 25
                 }
             ],
             "name": "pasted__pasted__pCubeShape25"
@@ -30165,7 +30165,7 @@
                     },
                     "indices": 3725,
                     "mode": 4,
-                    "material": 25
+                    "material": 26
                 }
             ],
             "name": "pasted__pasted__pCubeShape24"
@@ -30181,7 +30181,7 @@
                     },
                     "indices": 3730,
                     "mode": 4,
-                    "material": 24
+                    "material": 25
                 }
             ],
             "name": "pasted__pasted__pCubeShape23"
@@ -30197,7 +30197,7 @@
                     },
                     "indices": 3735,
                     "mode": 4,
-                    "material": 26
+                    "material": 27
                 }
             ],
             "name": "pasted__pasted__pCubeShape22"
@@ -30213,7 +30213,7 @@
                     },
                     "indices": 3740,
                     "mode": 4,
-                    "material": 27
+                    "material": 28
                 }
             ],
             "name": "pasted__pCubeShape26"
@@ -30229,7 +30229,7 @@
                     },
                     "indices": 3745,
                     "mode": 4,
-                    "material": 25
+                    "material": 26
                 }
             ],
             "name": "pasted__pCubeShape25"
@@ -30245,7 +30245,7 @@
                     },
                     "indices": 3750,
                     "mode": 4,
-                    "material": 25
+                    "material": 26
                 }
             ],
             "name": "pasted__pCubeShape24"
@@ -30261,7 +30261,7 @@
                     },
                     "indices": 3755,
                     "mode": 4,
-                    "material": 24
+                    "material": 25
                 }
             ],
             "name": "pasted__pCubeShape23"
@@ -30277,7 +30277,7 @@
                     },
                     "indices": 3760,
                     "mode": 4,
-                    "material": 28
+                    "material": 29
                 }
             ],
             "name": "pasted__pCubeShape22"
@@ -30293,7 +30293,7 @@
                     },
                     "indices": 3765,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pTorusShape9"
@@ -30309,7 +30309,7 @@
                     },
                     "indices": 3770,
                     "mode": 4,
-                    "material": 25
+                    "material": 26
                 }
             ],
             "name": "pTorusShape8"
@@ -30325,7 +30325,7 @@
                     },
                     "indices": 3775,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pTorusShape7"
@@ -30341,7 +30341,7 @@
                     },
                     "indices": 3780,
                     "mode": 4,
-                    "material": 25
+                    "material": 26
                 }
             ],
             "name": "pTorusShape6"
@@ -30357,7 +30357,7 @@
                     },
                     "indices": 3785,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pTorusShape5"
@@ -30373,7 +30373,7 @@
                     },
                     "indices": 3790,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pTorusShape4"
@@ -30389,7 +30389,7 @@
                     },
                     "indices": 3795,
                     "mode": 4,
-                    "material": 25
+                    "material": 26
                 }
             ],
             "name": "pTorusShape3"
@@ -30405,7 +30405,7 @@
                     },
                     "indices": 3800,
                     "mode": 4,
-                    "material": 25
+                    "material": 26
                 }
             ],
             "name": "pTorusShape2"
@@ -30421,7 +30421,7 @@
                     },
                     "indices": 3805,
                     "mode": 4,
-                    "material": 25
+                    "material": 26
                 }
             ],
             "name": "pTorusShape10"
@@ -30437,7 +30437,7 @@
                     },
                     "indices": 3810,
                     "mode": 4,
-                    "material": 24
+                    "material": 25
                 }
             ],
             "name": "pPlaneShape7"
@@ -30453,7 +30453,7 @@
                     },
                     "indices": 3815,
                     "mode": 4,
-                    "material": 25
+                    "material": 26
                 }
             ],
             "name": "pCylinderShape9"
@@ -30469,7 +30469,7 @@
                     },
                     "indices": 3820,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCylinderShape8"
@@ -30485,7 +30485,7 @@
                     },
                     "indices": 3825,
                     "mode": 4,
-                    "material": 25
+                    "material": 26
                 }
             ],
             "name": "pCylinderShape7"
@@ -30501,7 +30501,7 @@
                     },
                     "indices": 3830,
                     "mode": 4,
-                    "material": 25
+                    "material": 26
                 }
             ],
             "name": "pCylinderShape6"
@@ -30517,7 +30517,7 @@
                     },
                     "indices": 3835,
                     "mode": 4,
-                    "material": 25
+                    "material": 26
                 }
             ],
             "name": "pCylinderShape5"
@@ -30533,7 +30533,7 @@
                     },
                     "indices": 3840,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCylinderShape4"
@@ -30549,7 +30549,7 @@
                     },
                     "indices": 3845,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCylinderShape12"
@@ -30565,7 +30565,7 @@
                     },
                     "indices": 3850,
                     "mode": 4,
-                    "material": 25
+                    "material": 26
                 }
             ],
             "name": "pCylinderShape11"
@@ -30581,7 +30581,7 @@
                     },
                     "indices": 3855,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCylinderShape10"
@@ -30597,7 +30597,7 @@
                     },
                     "indices": 3860,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube60|pCubeShape41"
@@ -30613,7 +30613,7 @@
                     },
                     "indices": 3865,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube59|pCubeShape41"
@@ -30629,7 +30629,7 @@
                     },
                     "indices": 3870,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube58|pCubeShape39"
@@ -30645,7 +30645,7 @@
                     },
                     "indices": 3875,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube57|pCubeShape39"
@@ -30661,7 +30661,7 @@
                     },
                     "indices": 3880,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube56|pCubeShape41"
@@ -30677,7 +30677,7 @@
                     },
                     "indices": 3885,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube55|pCubeShape41"
@@ -30693,7 +30693,7 @@
                     },
                     "indices": 3890,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube54|pCubeShape39"
@@ -30709,7 +30709,7 @@
                     },
                     "indices": 3895,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube53|pCubeShape39"
@@ -30725,7 +30725,7 @@
                     },
                     "indices": 3900,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube52|pCubeShape39"
@@ -30741,7 +30741,7 @@
                     },
                     "indices": 3905,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube51|pCubeShape39"
@@ -30757,7 +30757,7 @@
                     },
                     "indices": 3910,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube50|pCubeShape41"
@@ -30789,7 +30789,7 @@
                     },
                     "indices": 3920,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube48|pCubeShape41"
@@ -30805,7 +30805,7 @@
                     },
                     "indices": 3925,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube47|pCubeShape41"
@@ -30821,7 +30821,7 @@
                     },
                     "indices": 3930,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube46|pCubeShape41"
@@ -30837,7 +30837,7 @@
                     },
                     "indices": 3935,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube45|pCubeShape39"
@@ -30869,7 +30869,7 @@
                     },
                     "indices": 3945,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube43|pCubeShape39"
@@ -30885,7 +30885,7 @@
                     },
                     "indices": 3950,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube42|pCubeShape41"
@@ -30901,7 +30901,7 @@
                     },
                     "indices": 3955,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube41|pCubeShape41"
@@ -30917,7 +30917,7 @@
                     },
                     "indices": 3960,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube40|pCubeShape39"
@@ -30933,7 +30933,7 @@
                     },
                     "indices": 3965,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube39|pCubeShape39"
@@ -30949,7 +30949,7 @@
                     },
                     "indices": 3970,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube38|pCubeShape38"
@@ -30965,7 +30965,7 @@
                     },
                     "indices": 3975,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube37|pCubeShape38"
@@ -30981,7 +30981,7 @@
                     },
                     "indices": 3980,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube36|pCubeShape36"
@@ -30997,7 +30997,7 @@
                     },
                     "indices": 3985,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube35|pCubeShape36"
@@ -31013,7 +31013,7 @@
                     },
                     "indices": 3990,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube34|pCubeShape38"
@@ -31029,7 +31029,7 @@
                     },
                     "indices": 3995,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube33|pCubeShape38"
@@ -31045,7 +31045,7 @@
                     },
                     "indices": 4000,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube32|pCubeShape36"
@@ -31061,7 +31061,7 @@
                     },
                     "indices": 4005,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube31|pCubeShape36"
@@ -31077,7 +31077,7 @@
                     },
                     "indices": 4010,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube30|pCubeShape38"
@@ -31109,7 +31109,7 @@
                     },
                     "indices": 4020,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube28|pCubeShape38"
@@ -31125,7 +31125,7 @@
                     },
                     "indices": 4025,
                     "mode": 4,
-                    "material": 25
+                    "material": 26
                 },
                 {
                     "attributes": {
@@ -31136,7 +31136,7 @@
                     },
                     "indices": 4030,
                     "mode": 4,
-                    "material": 30
+                    "material": 31
                 }
             ],
             "name": "pCubeShape20"
@@ -31152,7 +31152,7 @@
                     },
                     "indices": 4035,
                     "mode": 4,
-                    "material": 25
+                    "material": 26
                 }
             ],
             "name": "pCubeShape19"
@@ -31168,7 +31168,7 @@
                     },
                     "indices": 4040,
                     "mode": 4,
-                    "material": 24
+                    "material": 25
                 }
             ],
             "name": "pCubeShape18"
@@ -31184,7 +31184,7 @@
                     },
                     "indices": 4045,
                     "mode": 4,
-                    "material": 31
+                    "material": 32
                 }
             ],
             "name": "pCubeShape17"
@@ -31200,7 +31200,7 @@
                     },
                     "indices": 4050,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube21|pCubeShape36"
@@ -31216,7 +31216,7 @@
                     },
                     "indices": 4055,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube20|pCubeShape36"
@@ -31232,7 +31232,7 @@
                     },
                     "indices": 4060,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube19|pCubeShape36"
@@ -31248,7 +31248,7 @@
                     },
                     "indices": 4065,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube18|pCubeShape38"
@@ -31264,7 +31264,7 @@
                     },
                     "indices": 4070,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube17|pCubeShape36"
@@ -31280,7 +31280,7 @@
                     },
                     "indices": 4075,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube16|pCubeShape38"
@@ -31296,7 +31296,7 @@
                     },
                     "indices": 4080,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube15|pCubeShape38"
@@ -31312,7 +31312,7 @@
                     },
                     "indices": 4085,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube14|pCubeShape36"
@@ -31328,7 +31328,7 @@
                     },
                     "indices": 4090,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube13|pCubeShape38"
@@ -31344,7 +31344,7 @@
                     },
                     "indices": 4095,
                     "mode": 4,
-                    "material": 29
+                    "material": 30
                 }
             ],
             "name": "pCube12|pCubeShape36"
@@ -98014,18 +98014,36 @@
         {
             "pbrMetallicRoughness": {
                 "baseColorFactor": [
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
+                    1.0,
+                    1.0,
+                    1.0,
                     1.0
                 ],
-                "baseColorTexture": {
-                    "index": 2
-                },
-                "metallicFactor": 0.0,
-                "roughnessFactor": 1.0
+                "metallicFactor": 0.5,
+                "roughnessFactor": 0.5
             },
-            "alphaMode": "BLEND"
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "metallicFactor": 0.5,
+                "roughnessFactor": 0.5
+            },
+            "emissiveFactor": [
+                0.0,
+                0.0,
+                0.0
+            ]
         },
         {
             "pbrMetallicRoughness": {
@@ -98279,10 +98297,6 @@
         {
             "sampler": 0,
             "source": 1
-        },
-        {
-            "sampler": 0,
-            "source": 2
         }
     ],
     "images": [
@@ -98291,9 +98305,6 @@
         },
         {
             "uri": "myTexture-2.png"
-        },
-        {
-            "uri": "stop-sign_1.png"
         }
     ],
     "samplers": [
