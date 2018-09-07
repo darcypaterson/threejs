@@ -91261,7 +91261,8 @@
                 0.0,
                 0.0,
                 0.0
-            ]
+            ],
+            "alphaMode": "BLEND"
         }
     ],
     "bufferViews": [
