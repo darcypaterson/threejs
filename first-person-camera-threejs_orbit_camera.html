@@ -31,24 +31,24 @@
 		function init() {
 
 			scene = new THREE.Scene();
-// 			camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+			camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 			
-			camera = new THREE.CinematicCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );		
+// 			camera = new THREE.CinematicCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );		
 
 			scene.background = new THREE.Color( 0x17B3FF);
 			
 			
 
-			var effectController  = {
-				focalLength: 20,
+// 			var effectController  = {
+// 				focalLength: 20,
 				// jsDepthCalculation: true,
 				// shaderFocus: false,
 				//
-				fstop: 1.8,
+// 				fstop: 1.8,
 				// maxblur: 1.0,
 				//
-				showFocus: false,
-				focalDepth: 5,
+// 				showFocus: false,
+// 				focalDepth: 5,
 				// manualdof: false,
 				// vignetting: false,
 				// depthblur: false,
@@ -63,22 +63,22 @@
 				// pentagon: false,
 				//
 				// dithering: 0.0001
-			};
+// 			};
 			
 			
-			var matChanger = function( ) {
-				for ( var e in effectController ) {
-					if ( e in camera.postprocessing.bokeh_uniforms ) {
-						camera.postprocessing.bokeh_uniforms[ e ].value = effectController[ e ];
-					}
-				}
-				camera.postprocessing.bokeh_uniforms[ 'znear' ].value = camera.near;
-				camera.postprocessing.bokeh_uniforms[ 'zfar' ].value = camera.far;
-				camera.setLens( effectController.focalLength, camera.frameHeight, effectController.fstop, camera.coc );
-				effectController[ 'focalDepth' ] = camera.postprocessing.bokeh_uniforms[ 'focalDepth' ].value;
-			};
+// 			var matChanger = function( ) {
+// 				for ( var e in effectController ) {
+// 					if ( e in camera.postprocessing.bokeh_uniforms ) {
+// 						camera.postprocessing.bokeh_uniforms[ e ].value = effectController[ e ];
+// 					}
+// 				}
+// 				camera.postprocessing.bokeh_uniforms[ 'znear' ].value = camera.near;
+// 				camera.postprocessing.bokeh_uniforms[ 'zfar' ].value = camera.far;
+// 				camera.setLens( effectController.focalLength, camera.frameHeight, effectController.fstop, camera.coc );
+// 				effectController[ 'focalDepth' ] = camera.postprocessing.bokeh_uniforms[ 'focalDepth' ].value;
+// 			};
 
-			matChanger();
+// 			matChanger();
 
 			// Polygons
 
@@ -120,11 +120,11 @@
 
 			// Camera
 
-// 			camera.position.set(0, player.height, 25);
+			camera.position.set(0, player.height, 25);
 			// camera.lookAt(new THREE.Vector3(0, player.height, 0));
 
-				camera.setLens( 5 );
-				camera.position.set( 2, 1, 50 );
+// 				camera.setLens( 5 );
+// 				camera.position.set( 2, 1, 50 );
 
 
 			// Lighting
