@@ -95,7 +95,19 @@
 
 			
 			var loader = new THREE.GLTFLoader();
-			loader.load("bp_scene_6b.gltf", function ( gltf ) {
+			loader.load("bp_scene_6.gltf", function ( gltf ) {
+
+			scene.scale.x = 2;
+			scene.scale.y = 2;
+			scene.scale.z = 2;
+			    scene.add( gltf.scene );
+
+
+			});
+			
+			
+			var womanLoader = new THREE.GLTFLoader();
+			womanLoader.load("bp_scene_6_woman.gltf", function ( gltf ) {
 
 			scene.scale.x = 2;
 			scene.scale.y = 2;
@@ -106,16 +118,16 @@
 			});
 
 			
-// 			var carLoader = new THREE.GLTFLoader();
-// 			carLoader.load("car.gltf", function ( gltf ) {
+			var carLoader = new THREE.GLTFLoader();
+			carLoader.load("bp_scene_6_car.gltf", function ( gltf ) {
 
-// 			scene.scale.x = 2;
-// 			scene.scale.y = 2;
-// 			scene.scale.z = 2;
-// 			    scene.add( gltf.scene );
+			scene.scale.x = 2;
+			scene.scale.y = 2;
+			scene.scale.z = 2;
+			    scene.add( gltf.scene );
 
 
-// 			});
+			});
 
 
 			// Camera
