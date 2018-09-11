@@ -169,6 +169,12 @@
 			rectLight = new THREE.RectAreaLight( 0xffffff, 1, 10, 10 );
 			rectLight.position.set( 5, 5, 0 );
 			scene.add( rectLight );
+			
+			var rectLightMesh = new THREE.Mesh( new THREE.PlaneBufferGeometry(), new THREE.MeshBasicMaterial() );
+			rectLightMesh.scale.x = rectLight.width;
+			rectLightMesh.scale.y = rectLight.height;
+			rectLight.add( rectLightMesh );
+			
 
 			var ambLight = new THREE.AmbientLight( 0xffffff, 0.483 ); // soft white light
 			ambLight.position.set( 0, 1, 0 );
