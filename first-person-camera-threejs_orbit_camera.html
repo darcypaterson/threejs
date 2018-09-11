@@ -118,7 +118,8 @@
 						var path = paths[ i ];
 
 						var material = new THREE.MeshBasicMaterial( {
-							color: path.color,
+							// color: path.color,
+							color: 0xffffff,
 							side: THREE.DoubleSide,
 							depthWrite: false
 						} );
@@ -138,12 +139,12 @@
 					}
 
 					scene.add( group );
-					group.scale.x = 0.25;
-					group.scale.y = 0.25;
-					group.scale.z = 0.25;
+					group.scale.x = 0.125;
+					group.scale.y = 0.125;
+					group.scale.z = 0.125;
 					group.rotateX(180);
-					group.rotateY(90);
-					group.position.set( 5, 5, 5);
+					group.rotateY(180);
+					group.position.set( 1, 1, 1);
 
 
 				},
