@@ -35,7 +35,7 @@
 			
 // 			camera = new THREE.CinematicCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );		
 
-			scene.background = new THREE.Color( 0x17B3FF);
+			scene.background = new THREE.Color( 0x4893AA);
 			
 			
 
@@ -157,6 +157,10 @@
 			directionalLight.position.set( -5, 5, -5 );
 			scene.add( directionalLight );
 
+			var directionalLight2 = new THREE.DirectionalLight( 0xffffff, 1 );
+			directionalLight2.position.set( -5, 5, 5 );
+			scene.add( directionalLight2 );
+
 			var light = new THREE.PointLight( 0xffffff, 1.2, 50, 2 );
 			light.position.set( -0.5, 1, 0.5 );
 			scene.add( light );
@@ -166,11 +170,11 @@
 			// scene.add( light2 );
 			
 			
-			rectLight = new THREE.RectAreaLight( 0xffffff, 0.5, 3, 3 );
-			rectLight.position.set( 5, 5, 5 );
-			rectLight.rotation.y = 3;
-			rectLight.lookAt( 0, 0, 0 );
-			scene.add( rectLight );
+			// rectLight = new THREE.RectAreaLight( 0xffffff, 0.5, 3, 3 );
+			// rectLight.position.set( 5, 5, 5 );
+			// rectLight.rotation.y = 3;
+			// rectLight.lookAt( 0, 0, 0 );
+			// scene.add( rectLight );
 			
 			// var rectLightMesh = new THREE.Mesh( new THREE.PlaneBufferGeometry(), new THREE.MeshBasicMaterial() );
 			// rectLightMesh.scale.x = rectLight.width;
@@ -178,8 +182,8 @@
 			// rectLight.add( rectLightMesh );
 			
 
-			rectLightHelper = new THREE.RectAreaLightHelper( rectLight );
-			scene.add( rectLightHelper );
+			// rectLightHelper = new THREE.RectAreaLightHelper( rectLight );
+			// scene.add( rectLightHelper );
 
 			var ambLight = new THREE.AmbientLight( 0xffffff, 0.483 ); // soft white light
 			ambLight.position.set( 0, 1, 0 );
@@ -209,7 +213,8 @@
 			var dirhelper = new THREE.DirectionalLightHelper( directionalLight, 2 );
 			scene.add( dirhelper );
 
-
+			var dirhelper2 = new THREE.DirectionalLightHelper( directionalLight2, 2 );
+			scene.add( dirhelper );
 			// Render 
 
 			renderer = new THREE.WebGLRenderer( { antialias: true } );
