@@ -102,10 +102,10 @@
 
 
 			// instantiate a loader
-			var svgLoader = new THREE.SVGLoader();
+			var svgLoaderCloudOne = new THREE.SVGLoader();
 
 			// load a SVG resource
-			svgLoader.load(
+			svgLoaderCloudOne.load(
 				// resource URL
 				'images/cloud-1.svg',
 				// called when the resource is loaded
@@ -146,7 +146,6 @@
 					group.rotation.x = 180 * ( Math.PI / 180 );
 					group.rotation.y = 90 * ( Math.PI / 180 );
 					group.position.set( 1, 4, 1);
-					group.add( new THREE.AxesHelper( 5 ) );
 
 
 				},
@@ -166,9 +165,132 @@
 
 
 
+			// instantiate a loader
+			var svgLoaderCloudTwo = new THREE.SVGLoader();
+
+			// load a SVG resource
+			svgLoaderCloudTwo.load(
+				// resource URL
+				'images/cloud-2.svg',
+				// called when the resource is loaded
+				function ( paths ) {
+
+					var group = new THREE.Group();
+
+					for ( var i = 0; i < paths.length; i ++ ) {
+
+						var path = paths[ i ];
+
+						var material = new THREE.MeshBasicMaterial( {
+							// color: path.color,
+							color: 0xffffff,
+							side: THREE.DoubleSide,
+							depthWrite: true,
+							opacity: 0.7
+						} );
+
+						var shapes = path.toShapes( true );
+
+						for ( var j = 0; j < shapes.length; j ++ ) {
+
+							var shape = shapes[ j ];
+							var geometry = new THREE.ShapeBufferGeometry( shape );
+							var mesh = new THREE.Mesh( geometry, material );
+							group.add( mesh );
 
 
-			
+						}
+
+					}
+
+					scene.add( group );
+					group.scale.x = 0.0095;
+					group.scale.y = 0.0095;
+					group.scale.z = 0.0095;
+					group.rotation.x = 180 * ( Math.PI / 180 );
+					group.rotation.y = 90 * ( Math.PI / 180 );
+					group.position.set( 3, 4, 1);
+
+
+
+				},
+				// called when loading is in progresses
+				function ( xhr ) {
+
+					console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+				},
+				// called when loading has errors
+				function ( error ) {
+
+					console.log( 'An error happened' );
+
+				}
+			);
+
+
+			// instantiate a loader
+			var svgLoaderCloudThree = new THREE.SVGLoader();
+
+			// load a SVG resource
+			svgLoaderCloudThree.load(
+				// resource URL
+				'images/cloud-3.svg',
+				// called when the resource is loaded
+				function ( paths ) {
+
+					var group = new THREE.Group();
+
+					for ( var i = 0; i < paths.length; i ++ ) {
+
+						var path = paths[ i ];
+
+						var material = new THREE.MeshBasicMaterial( {
+							// color: path.color,
+							color: 0xffffff,
+							side: THREE.DoubleSide,
+							depthWrite: true,
+							opacity: 0.7
+						} );
+
+						var shapes = path.toShapes( true );
+
+						for ( var j = 0; j < shapes.length; j ++ ) {
+
+							var shape = shapes[ j ];
+							var geometry = new THREE.ShapeBufferGeometry( shape );
+							var mesh = new THREE.Mesh( geometry, material );
+							group.add( mesh );
+
+
+						}
+
+					}
+
+					scene.add( group );
+					group.scale.x = 0.0095;
+					group.scale.y = 0.0095;
+					group.scale.z = 0.0095;
+					group.rotation.x = 180 * ( Math.PI / 180 );
+					group.rotation.y = 90 * ( Math.PI / 180 );
+					group.position.set( 5, 4, 3);
+
+
+				},
+				// called when loading is in progresses
+				function ( xhr ) {
+
+					console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+				},
+				// called when loading has errors
+				function ( error ) {
+
+					console.log( 'An error happened' );
+
+				}
+			);
+
 
 
 
@@ -214,16 +336,6 @@
 
 			});
 
-			var cloudLoader = new THREE.GLTFLoader();
-			cloudLoader.load("bp_scene_6_clouds.gltf", function ( gltf ) {
-
-			scene.scale.x = 2;
-			scene.scale.y = 2;
-			scene.scale.z = 2;
-			    scene.add( gltf.scene );
-
-
-			});
 			
 
 			// Camera
@@ -239,12 +351,12 @@
 
 
 			var directionalLight = new THREE.DirectionalLight( 0xffffff, 1 );
-			directionalLight.position.set( -5, 5, -5 );
+			directionalLight.position.set( 2, 5, -15 );
 			scene.add( directionalLight );
 
-			var directionalLight2 = new THREE.DirectionalLight( 0xffffff, 1 );
-			directionalLight2.position.set( -5, 5, 5 );
-			scene.add( directionalLight2 );
+			var directionalLightTwo = new THREE.DirectionalLight( 0xffffff, 1 );
+			directionalLightTwo.position.set( -2, 5, -15 );
+			scene.add( directionalLightTwo );
 
 			var light = new THREE.PointLight( 0xffffff, 1.2, 50, 2 );
 			light.position.set( -0.5, 1, 0.5 );
@@ -298,8 +410,8 @@
 			var dirhelper = new THREE.DirectionalLightHelper( directionalLight, 2 );
 			scene.add( dirhelper );
 
-			var dirhelper2 = new THREE.DirectionalLightHelper( directionalLight2, 2 );
-			scene.add( dirhelper );
+			var dirhelperTwo = new THREE.DirectionalLightHelper( directionalLightTwo, 2 );
+			scene.add( dirhelperTwo );
 
 
 
