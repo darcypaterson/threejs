@@ -131,16 +131,14 @@
 							var geometry = new THREE.ShapeBufferGeometry( shape );
 							var mesh = new THREE.Mesh( geometry, material );
 							group.add( mesh );
-							mesh.scale.x = 0.25;
-							mesh.scale.y = 0.25;
-							mesh.scale.z = 0.25;
-							mesh.rotation.set(new THREE.Vector3( 0, 0, Math.PI / 2)); 
+
 
 						}
 
 					}
 
 					scene.add( group );
+					scene.scale.y = 0.25;
 		
 
 				},
