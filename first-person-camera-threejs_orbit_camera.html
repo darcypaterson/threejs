@@ -145,7 +145,7 @@
 					group.scale.z = 0.0095;
 					group.rotation.x = 180 * ( Math.PI / 180 );
 					group.rotation.y = 90 * ( Math.PI / 180 );
-					group.position.set( 1, 4, 1);
+					group.position.set( 1, 10, 1);
 
 
 				},
@@ -209,7 +209,7 @@
 					group.scale.z = 0.0095;
 					group.rotation.x = 180 * ( Math.PI / 180 );
 					group.rotation.y = 90 * ( Math.PI / 180 );
-					group.position.set( 3, 4, 1);
+					group.position.set( 3, 10, 1);
 
 
 
@@ -273,7 +273,7 @@
 					group.scale.z = 0.0095;
 					group.rotation.x = 180 * ( Math.PI / 180 );
 					group.rotation.y = 90 * ( Math.PI / 180 );
-					group.position.set( 5, 4, 3);
+					group.position.set( 5, 10, 3);
 
 
 				},
@@ -351,11 +351,11 @@
 
 
 			var directionalLight = new THREE.DirectionalLight( 0xffffff, 1 );
-			directionalLight.position.set( 2, 5, -15 );
+			directionalLight.position.set( -12, 5, -5 );
 			scene.add( directionalLight );
 
 			var directionalLightTwo = new THREE.DirectionalLight( 0xffffff, 1 );
-			directionalLightTwo.position.set( -2, 5, -15 );
+			directionalLightTwo.position.set( -12, 5, 5 );
 			scene.add( directionalLightTwo );
 
 			var light = new THREE.PointLight( 0xffffff, 1.2, 50, 2 );
