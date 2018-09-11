@@ -432,10 +432,10 @@
 
 
 
-			var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-			var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-			var cube = new THREE.Mesh( geometry, material );
-			scene.add( cube );
+			var ngeometry = new THREE.BoxGeometry( 1, 1, 1 );
+			var nmaterial = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+			var ncube = new THREE.Mesh( ngeometry, nmaterial );
+			scene.add( ncube );
 
 
 
@@ -476,7 +476,7 @@
 			// mesh.rotation.x += 0.01;
 			// mesh.rotation.y += 0.02;
 
-			cube.translate.x += 0.01;
+			// ncube.translate.x += 0.01;
 
 			renderer.render(scene, camera);
 
