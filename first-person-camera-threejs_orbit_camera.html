@@ -137,6 +137,8 @@
 					}
 
 					scene.add( group );
+					scene.scale( 0.25, 0.25, 0.25 );
+					scene.rotation.set(new THREE.Vector3( 0, 0, Math.PI / 4)); 
 
 				},
 				// called when loading is in progresses
@@ -155,7 +157,7 @@
 
 
 
-
+			
 
 
 
@@ -287,6 +289,27 @@
 
 			var dirhelper2 = new THREE.DirectionalLightHelper( directionalLight2, 2 );
 			scene.add( dirhelper );
+
+
+
+
+
+
+
+			var axesHelper = new THREE.AxesHelper( 5 );
+			scene.add( axesHelper );
+
+
+
+
+
+
+
+
+
+
+
+
 			// Render 
 
 			renderer = new THREE.WebGLRenderer( { antialias: true } );
