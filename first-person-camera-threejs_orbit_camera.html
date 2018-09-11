@@ -262,8 +262,8 @@
 
 							var shape = shapes[ j ];
 							var geometry = new THREE.ShapeBufferGeometry( shape );
-							var mesh = new THREE.Mesh( geometry, material );
-							group.add( mesh );
+							var meshThree = new THREE.Mesh( geometry, material );
+							group.add( meshThree );
 
 
 						}
@@ -472,7 +472,7 @@
 			// mesh.rotation.x += 0.01;
 			// mesh.rotation.y += 0.02;
 
-			group.translate.x += 0.01;
+			meshThree.translate.x += 0.01;
 
 			renderer.render(scene, camera);
 
