@@ -25,6 +25,7 @@
 
 		var scene, camera, renderer, mesh;
 		var meshFloor;
+		var meshThree;
 
 		var keyboard = {};
 		var player = { height: 1.8, speed: 0.1, turnSpeed: Math.PI * 0.02 };
@@ -472,7 +473,7 @@
 			// mesh.rotation.x += 0.01;
 			// mesh.rotation.y += 0.02;
 
-			svgLoaderCloudThree.translate.x += 0.01;
+			meshThree.translate.x += 0.01;
 
 			renderer.render(scene, camera);
 
