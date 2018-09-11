@@ -164,6 +164,11 @@
 			// var light2 = new THREE.PointLight( 0xffffff, 1.3, 50, 2 );
 			// light2.position.set( -1, 1, -1 );
 			// scene.add( light2 );
+			
+			
+			rectLight = new THREE.RectAreaLight( 0xffffff, 1, 10, 10 );
+			rectLight.position.set( 5, 5, 0 );
+			scene.add( rectLight );
 
 			var ambLight = new THREE.AmbientLight( 0xffffff, 0.483 ); // soft white light
 			ambLight.position.set( 0, 1, 0 );
