@@ -354,11 +354,11 @@
 
 
 			var directionalLight = new THREE.DirectionalLight( 0xffffff, 1 );
-			directionalLight.position.set( 12, 5, -5 );
+			directionalLight.position.set( 12, 5, -3 );
 			scene.add( directionalLight );
 
 			var directionalLightTwo = new THREE.DirectionalLight( 0xffffff, 1 );
-			directionalLightTwo.position.set( 12, 5, 5 );
+			directionalLightTwo.position.set( 12, 5, 3 );
 			scene.add( directionalLightTwo );
 
 			var light = new THREE.PointLight( 0xffffff, 1.2, 50, 2 );
@@ -385,12 +385,12 @@
 			// rectLightHelper = new THREE.RectAreaLightHelper( rectLight );
 			// scene.add( rectLightHelper );
 
-			// var ambLight = new THREE.AmbientLight( 0xffffff, 0.483 ); // soft white light
-			// ambLight.position.set( 0, 1, 0 );
-			// scene.add( ambLight );
+			var ambLight = new THREE.AmbientLight( 0xffffff, 0.283 ); // soft white light
+			ambLight.position.set( 0, 1, 0 );
+			scene.add( ambLight );
 
 			var spotLight = new THREE.SpotLight( 0xffffff, 0.3 );
-			spotLight.position.set( -15, 12, -5 );
+			spotLight.position.set( -10, 12, -5 );
 			spotLight.castShadow = true;
 			spotLight.shadow.mapSize.width = 500;
 			spotLight.shadow.mapSize.height = 500;
