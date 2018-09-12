@@ -366,13 +366,13 @@
 			// light.position.set( -0.5, 1, 0.5 );
 			// scene.add( light );
 
-			var light2 = new THREE.PointLight( 0xffffff, 0.85, 50, 2 );
-			light2.position.set( -4.55, 0.2, 0.18 );
-			scene.add( light2 );
+			// var light2 = new THREE.PointLight( 0xffffff, 0.85, 50, 2 );
+			// light2.position.set( -4.55, 0.2, 0.18 );
+			// scene.add( light2 );
 
 
 			var ambLight = new THREE.AmbientLight( 0xffffff, 0.283 ); // soft white light
-			ambLight.position.set( 0, 3, 0 );
+			ambLight.position.set( -1.55, 0.2, 0.18 );
 			scene.add( ambLight );
 
 			var spotLight = new THREE.SpotLight( 0xffffff, 0.3 );
@@ -397,8 +397,8 @@
 			// scene.add( pointLightHelper );
 
 
-			var pointLightHelper2 = new THREE.PointLightHelper( light2, 0.01 );
-			scene.add( pointLightHelper2 );
+			// var pointLightHelper2 = new THREE.PointLightHelper( light2, 0.01 );
+			// scene.add( pointLightHelper2 );
 
 
 			var dirhelper = new THREE.DirectionalLightHelper( directionalLight, 2 );
