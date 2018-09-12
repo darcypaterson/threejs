@@ -37,7 +37,7 @@
 			
 // 			camera = new THREE.CinematicCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );		
 
-			scene.background = new THREE.Color( 0x4893AA);
+			scene.background = new THREE.Color( 0x4893AA );
 			
 			
 
@@ -101,6 +101,7 @@
 					group.rotation.x = 180 * ( Math.PI / 180 );
 					group.rotation.y = 90 * ( Math.PI / 180 );
 					group.position.set( 1, 10, 1);
+					group.position.z += 0.005;
 
 
 				},
@@ -329,7 +330,7 @@
 			scene.add( ambLight );
 
 			var spotLight = new THREE.SpotLight( 0xffffff, 0.3 );
-			spotLight.position.set( -10, 12, -5 );
+			spotLight.position.set( 10, 12, -5 );
 			spotLight.castShadow = true;
 			spotLight.shadow.mapSize.width = 500;
 			spotLight.shadow.mapSize.height = 500;
