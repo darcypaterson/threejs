@@ -102,7 +102,9 @@
 					groupOne.rotation.y = 90 * ( Math.PI / 180 );
 					groupOne.position.x = 1; 
 					groupOne.position.y = 10;
-					groupOne.position.z = 1;
+					groupOne.position.z += 0.01;
+
+					animate();
 
 
 				},
@@ -395,7 +397,7 @@
 
 				// ncube.translate.x += 0.09;
 
-				groupOne.position.z += 0.09;
+				
 
 				renderer.render(scene, camera);
 
