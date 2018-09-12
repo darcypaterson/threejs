@@ -27,6 +27,8 @@
 		var meshFloor;
 		var meshThree;
 
+		var theNewNum;
+
 		var keyboard = {};
 		var player = { height: 1.8, speed: 0.1, turnSpeed: Math.PI * 0.02 };
 
@@ -102,9 +104,8 @@
 					groupOne.rotation.y = 90 * ( Math.PI / 180 );
 					groupOne.position.x = 1; 
 					groupOne.position.y = 10;
-					groupOne.position.z += 0.01;
+					groupOne.position.z += theNewNum;
 
-					animate();
 
 
 				},
@@ -301,11 +302,11 @@
 
 
 			var directionalLight = new THREE.DirectionalLight( 0xffffff, 1 );
-			directionalLight.position.set( 12, 5, -3 );
+			directionalLight.position.set( -12, 5, -3 );
 			scene.add( directionalLight );
 
 			var directionalLightTwo = new THREE.DirectionalLight( 0xffffff, 1 );
-			directionalLightTwo.position.set( 12, 5, 3 );
+			directionalLightTwo.position.set( -12, 5, 3 );
 			scene.add( directionalLightTwo );
 
 			// var light = new THREE.PointLight( 0xffffff, 1.2, 50, 2 );
@@ -318,7 +319,7 @@
 
 
 			var ambLight = new THREE.AmbientLight( 0xffffff, 0.883 ); // soft white light
-			ambLight.position.set( -1.55, 0.2, 0.18 );
+			ambLight.position.set( 11.55, 0.2, 0.18 );
 			scene.add( ambLight );
 
 			// var spotLight = new THREE.SpotLight( 0xffffff, 0.3 );
@@ -396,6 +397,8 @@
 				// ncube.rotation.y += 0.02;
 
 				// ncube.translate.x += 0.09;
+
+				theNewNum += 0.01;
 
 				
 
