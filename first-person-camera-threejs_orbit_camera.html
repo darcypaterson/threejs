@@ -41,60 +41,13 @@
 			
 			
 
-// 			var effectController  = {
-// 				focalLength: 20,
-				// jsDepthCalculation: true,
-				// shaderFocus: false,
-				//
-// 				fstop: 1.8,
-				// maxblur: 1.0,
-				//
-// 				showFocus: false,
-// 				focalDepth: 5,
-				// manualdof: false,
-				// vignetting: false,
-				// depthblur: false,
-				//
-				// threshold: 0.5,
-				// gain: 2.0,
-				// bias: 0.5,
-				// fringe: 0.7,
-				//
-				// focalLength: 35,
-				// noise: true,
-				// pentagon: false,
-				//
-				// dithering: 0.0001
-// 			};
-			
-			
-// 			var matChanger = function( ) {
-// 				for ( var e in effectController ) {
-// 					if ( e in camera.postprocessing.bokeh_uniforms ) {
-// 						camera.postprocessing.bokeh_uniforms[ e ].value = effectController[ e ];
-// 					}
-// 				}
-// 				camera.postprocessing.bokeh_uniforms[ 'znear' ].value = camera.near;
-// 				camera.postprocessing.bokeh_uniforms[ 'zfar' ].value = camera.far;
-// 				camera.setLens( effectController.focalLength, camera.frameHeight, effectController.fstop, camera.coc );
-// 				effectController[ 'focalDepth' ] = camera.postprocessing.bokeh_uniforms[ 'focalDepth' ].value;
-// 			};
-
-// 			matChanger();
 
 			// Polygons
 
-
-
-			// Loader
-
-// 				var loader = new THREE.GLTFLoader();
-// 				loader.load( 'export-1-new.gltf', function ( gltf ) {
-// 					scene.add( gltf.scene );
-// 				}, undefined, function ( e ) {
-// 					console.error( e );
-// 				} );
-
+			var ngeometry = new THREE.BoxGeometry( 1, 1, 1 );
+			var nmaterial = new THREE.MeshBasicMaterial( { color: 0x00ff00, wireframe: true } );
+			var ncube = new THREE.Mesh( ngeometry, naterial );
+			scene.add( ncube );
 
 
 
@@ -371,7 +324,7 @@
 			// scene.add( light2 );
 
 
-			var ambLight = new THREE.AmbientLight( 0xffffff, 0.283 ); // soft white light
+			var ambLight = new THREE.AmbientLight( 0xffffff, 0.883 ); // soft white light
 			ambLight.position.set( -1.55, 0.2, 0.18 );
 			scene.add( ambLight );
 
@@ -444,10 +397,10 @@
 
 				requestAnimationFrame(animate);
 
-				// ncube.rotation.x += 0.01;
-				// ncube.rotation.y += 0.02;
+				ncube.rotation.x += 0.01;
+				ncube.rotation.y += 0.02;
 
-				// ncube.translate.x += 0.01;
+				ncube.translate.x += 0.005;
 
 				renderer.render(scene, camera);
 
