@@ -108,9 +108,17 @@
 
 						requestAnimationFrame(makeNewNumber);
 
-						groupOne.position.z += 0.01;
+						if ( groupOne.position.z <= 10 ) {
 
-						console.log("hi dude");
+
+							groupOne.position.z += 0.01;
+
+						} else {
+
+							groupOne.position.z = 0;
+
+						}
+
 
 					};
 
@@ -329,8 +337,8 @@
 			// scene.add( light2 );
 
 
-			var ambLight = new THREE.AmbientLight( 0xffffff, 0.883 ); // soft white light
-			ambLight.position.set( 0, 12, 0 );
+			var ambLight = new THREE.AmbientLight( 0x404040, 0.583 ); // soft white light
+			ambLight.position.set( 3, 12, 0 );
 			scene.add( ambLight );
 
 			// var spotLight = new THREE.SpotLight( 0xffffff, 0.3 );
@@ -418,7 +426,6 @@
 
 
 			animate();
-			console.log(theNewNum);
 
 
 		}
