@@ -366,9 +366,9 @@
 			light.position.set( -0.5, 1, 0.5 );
 			scene.add( light );
 
-			// var light2 = new THREE.PointLight( 0xffffff, 1.3, 50, 2 );
-			// light2.position.set( -1, 1, -1 );
-			// scene.add( light2 );
+			var light2 = new THREE.PointLight( 0xffffff, 1.3, 50, 2 );
+			light2.position.set( -1, 1, -1 );
+			scene.add( light2 );
 			
 			
 			// rectLight = new THREE.RectAreaLight( 0xffffff, 0.5, 3, 3 );
@@ -410,6 +410,11 @@
 
 			var pointLightHelper = new THREE.PointLightHelper( light, sphereSize );
 			scene.add( pointLightHelper );
+
+
+			var pointLightHelper2 = new THREE.PointLightHelper( light2, sphereSize );
+			scene.add( pointLightHelper2 );
+
 
 			var dirhelper = new THREE.DirectionalLightHelper( directionalLight, 2 );
 			scene.add( dirhelper );
