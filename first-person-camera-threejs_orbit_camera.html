@@ -100,8 +100,9 @@
 					group.scale.z = 0.0095;
 					group.rotation.x = 180 * ( Math.PI / 180 );
 					group.rotation.y = 90 * ( Math.PI / 180 );
-					group.position.set( 1, 10, 1);
-					group.position.z += 0.005;
+					group.position.x = 1; 
+					group.position.y = 10;
+					group.position.z = 1;
 
 
 				},
@@ -329,20 +330,22 @@
 			ambLight.position.set( -1.55, 0.2, 0.18 );
 			scene.add( ambLight );
 
-			var spotLight = new THREE.SpotLight( 0xffffff, 0.3 );
-			spotLight.position.set( 10, 12, -5 );
-			spotLight.castShadow = true;
-			spotLight.shadow.mapSize.width = 500;
-			spotLight.shadow.mapSize.height = 500;
-			spotLight.shadow.camera.near = .25;
-			spotLight.shadow.camera.far = 1000;
-			spotLight.shadow.camera.fov = 3;
-			scene.add( spotLight );
+			// var spotLight = new THREE.SpotLight( 0xffffff, 0.3 );
+			// spotLight.position.set( 10, 12, -5 );
+			// spotLight.castShadow = true;
+			// spotLight.shadow.mapSize.width = 500;
+			// spotLight.shadow.mapSize.height = 500;
+			// spotLight.shadow.camera.near = .25;
+			// spotLight.shadow.camera.far = 1000;
+			// spotLight.shadow.camera.fov = 3;
+			// scene.add( spotLight );
 
 
 			var sphereSize = 1;
-			var spotLightHelper = new THREE.SpotLightHelper( spotLight, sphereSize );
-			scene.add( spotLightHelper );
+
+			
+			// var spotLightHelper = new THREE.SpotLightHelper( spotLight, sphereSize );
+			// scene.add( spotLightHelper );
 
 			// var pointLightHelper2 = new THREE.PointLightHelper( light2, sphereSize );
 			// scene.add( pointLightHelper2 );
@@ -402,6 +405,8 @@
 				// ncube.rotation.y += 0.02;
 
 				// ncube.translate.x += 0.09;
+
+				svgLoaderCloudOne.position.z += 0.09;
 
 				renderer.render(scene, camera);
 
