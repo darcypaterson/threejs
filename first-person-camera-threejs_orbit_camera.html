@@ -27,7 +27,6 @@
 		var meshFloor;
 		var meshThree;
 
-		var theNewNum;
 
 		var keyboard = {};
 		var player = { height: 1.8, speed: 0.1, turnSpeed: Math.PI * 0.02 };
@@ -104,7 +103,17 @@
 					groupOne.rotation.y = 90 * ( Math.PI / 180 );
 					groupOne.position.x = 1; 
 					groupOne.position.y = 10;
-					groupOne.position.z = theNewNum;
+
+					function makeNewNumber () {
+
+						requestAnimationFrame(makeNewNumber);
+
+						groupOne.position.z += 0.01;
+
+						console.log("hi dude");
+
+					};
+					
 
 
 
@@ -309,7 +318,7 @@
 			directionalLightTwo.position.set( -12, 5, 3 );
 			scene.add( directionalLightTwo );
 
-			var light = new THREE.PointLight( 0xffffff, 1.9, 0, 2 );
+			var light = new THREE.PointLight( 0xffffff, 1, 0, 2 );
 			light.position.set( 2, 8, 0.5 );
 			scene.add( light );
 
@@ -318,9 +327,9 @@
 			// scene.add( light2 );
 
 
-			// var ambLight = new THREE.AmbientLight( 0xffffff, 0.883 ); // soft white light
-			// ambLight.position.set( 11.55, 0.2, 0.18 );
-			// scene.add( ambLight );
+			var ambLight = new THREE.AmbientLight( 0xffffff, 0.883 ); // soft white light
+			ambLight.position.set( 0, 12, 0 );
+			scene.add( ambLight );
 
 			// var spotLight = new THREE.SpotLight( 0xffffff, 0.3 );
 			// spotLight.position.set( 10, 12, -5 );
@@ -399,14 +408,6 @@
 				// ncube.rotation.y += 0.02;
 
 				// ncube.translate.x += 0.09;
-
-				theNewNum -= 0.09;
-
-
-
-				
-
-				
 
 				renderer.render(scene, camera);
 
