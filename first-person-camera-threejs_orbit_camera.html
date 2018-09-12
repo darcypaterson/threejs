@@ -367,7 +367,7 @@
 			scene.add( light );
 
 			var light2 = new THREE.PointLight( 0xffffff, 1, 50, 2 );
-			light2.position.set( -1.5, 0.5, 1 );
+			light2.position.set( -1.6, 0.25, 0.75 );
 			scene.add( light2 );
 			
 			
@@ -412,7 +412,7 @@
 			scene.add( pointLightHelper );
 
 
-			var pointLightHelper2 = new THREE.PointLightHelper( light2, 0.2 );
+			var pointLightHelper2 = new THREE.PointLightHelper( light2, 0.1 );
 			scene.add( pointLightHelper2 );
 
 
@@ -425,23 +425,8 @@
 
 
 
-
-
-
 			var axesHelper = new THREE.AxesHelper( 5 );
 			scene.add( axesHelper );
-
-
-
-
-
-
-
-			var ngeometry = new THREE.BoxGeometry( 1, 1, 1 );
-			var nmaterial = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-			var ncube = new THREE.Mesh( ngeometry, nmaterial );
-			scene.add( ncube );
-
 
 
 
