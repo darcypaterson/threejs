@@ -309,7 +309,7 @@
 			directionalLightTwo.position.set( -12, 5, 3 );
 			scene.add( directionalLightTwo );
 
-			var light = new THREE.PointLight( 0xffffff, 1.9, 50, 2 );
+			var light = new THREE.PointLight( 0xffffff, 1.9, 5, 2 );
 			light.position.set( 2, 8, 0.5 );
 			scene.add( light );
 
@@ -416,6 +416,7 @@
 
 
 			animate();
+			console.log(theNewNum);
 
 
 		}
