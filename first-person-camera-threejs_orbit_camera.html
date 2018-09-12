@@ -366,8 +366,8 @@
 			light.position.set( -0.5, 1, 0.5 );
 			scene.add( light );
 
-			var light2 = new THREE.PointLight( 0xffffff, 1, 50, 2 );
-			light2.position.set( -1.6, 0.3, 0.1 );
+			var light2 = new THREE.PointLight( 0xffffff, 0.5, 50, 2 );
+			light2.position.set( -1.55, 0.2, 0.175 );
 			scene.add( light2 );
 
 
@@ -435,32 +435,34 @@
 
 			});
 
-			animate();
+
 
 			controls = new THREE.OrbitControls( camera, renderer.domElement );
 			controls.maxDistance = 300;
 			controls.enablePan = true;
 			controls.enableRotate = true;
 
+			function animate() {
+
+				requestAnimationFrame(animate);
+
+				// ncube.rotation.x += 0.01;
+				// ncube.rotation.y += 0.02;
+
+				// ncube.translate.x += 0.01;
+
+				renderer.render(scene, camera);
+
+
+			}
+
+
+			animate();
+
+
 		}
 
-		function animate() {
 
-			requestAnimationFrame(animate);
-
-			// ncube.rotation.x += 0.01;
-			// ncube.rotation.y += 0.02;
-
-			// ncube.translate.x += 0.01;
-
-			renderer.render(scene, camera);
-
-
-
-
-
-
-		}
 
 		// function keyDown(e) {
 
