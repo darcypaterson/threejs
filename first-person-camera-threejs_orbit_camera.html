@@ -371,9 +371,9 @@
 			scene.add( light2 );
 
 
-			var ambLight = new THREE.AmbientLight( 0xffffff, 0.283 ); // soft white light
-			ambLight.position.set( 0, 1, 0 );
-			scene.add( ambLight );
+			// var ambLight = new THREE.AmbientLight( 0xffffff, 0.283 ); // soft white light
+			// ambLight.position.set( 0, 1, 0 );
+			// scene.add( ambLight );
 
 			var spotLight = new THREE.SpotLight( 0xffffff, 0.3 );
 			spotLight.position.set( -10, 12, -5 );
@@ -406,8 +406,6 @@
 
 			var dirhelperTwo = new THREE.DirectionalLightHelper( directionalLightTwo, 2 );
 			scene.add( dirhelperTwo );
-
-
 
 
 			var axesHelper = new THREE.AxesHelper( 5 );
