@@ -104,7 +104,7 @@
 					groupOne.rotation.y = 90 * ( Math.PI / 180 );
 					groupOne.position.x = 1; 
 					groupOne.position.y = 10;
-					groupOne.position.z += theNewNum;
+					groupOne.position.z = theNewNum;
 
 
 
@@ -309,18 +309,18 @@
 			directionalLightTwo.position.set( -12, 5, 3 );
 			scene.add( directionalLightTwo );
 
-			// var light = new THREE.PointLight( 0xffffff, 1.2, 50, 2 );
-			// light.position.set( -0.5, 1, 0.5 );
-			// scene.add( light );
+			var light = new THREE.PointLight( 0xffffff, 1.2, 50, 2 );
+			light.position.set( 12, 5, 0.5 );
+			scene.add( light );
 
 			// var light2 = new THREE.PointLight( 0xffffff, 0.85, 50, 2 );
 			// light2.position.set( -4.55, 0.2, 0.18 );
 			// scene.add( light2 );
 
 
-			var ambLight = new THREE.AmbientLight( 0xffffff, 0.883 ); // soft white light
-			ambLight.position.set( 11.55, 0.2, 0.18 );
-			scene.add( ambLight );
+			// var ambLight = new THREE.AmbientLight( 0xffffff, 0.883 ); // soft white light
+			// ambLight.position.set( 11.55, 0.2, 0.18 );
+			// scene.add( ambLight );
 
 			// var spotLight = new THREE.SpotLight( 0xffffff, 0.3 );
 			// spotLight.position.set( 10, 12, -5 );
@@ -342,8 +342,8 @@
 			// var pointLightHelper2 = new THREE.PointLightHelper( light2, sphereSize );
 			// scene.add( pointLightHelper2 );
 
-			// var pointLightHelper = new THREE.PointLightHelper( light, sphereSize );
-			// scene.add( pointLightHelper );
+			var pointLightHelper = new THREE.PointLightHelper( light, sphereSize );
+			scene.add( pointLightHelper );
 
 
 			// var pointLightHelper2 = new THREE.PointLightHelper( light2, 0.01 );
@@ -389,6 +389,9 @@
 			controls.enablePan = true;
 			controls.enableRotate = true;
 
+
+			theNewNum = 1;
+
 			function animate() {
 
 				requestAnimationFrame(animate);
@@ -398,7 +401,7 @@
 
 				// ncube.translate.x += 0.09;
 
-				theNewNum += 0.01;
+				
 
 				
 
