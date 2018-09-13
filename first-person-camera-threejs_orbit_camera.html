@@ -312,22 +312,6 @@
 
 			
 
-			});
-
-			
-			var carLoader = new THREE.GLTFLoader();
-			carLoader.load("bp_scene_6_car.gltf", function ( gltf ) {
-
-			scene.scale.x = 2;
-			scene.scale.y = 2;
-			scene.scale.z = 2;
-			    scene.add( gltf.scene );
-
-
-			});
-
-			
-
 			// Camera
 
 			camera.position.set(0, player.height, 25);
@@ -361,7 +345,6 @@
 			ambLight.position.set( 3, 2, 0 );
 			scene.add( ambLight );
 
-
 			// var spotLight = new THREE.SpotLight( 0xffffff, 0.3 );
 			// spotLight.position.set( 10, 12, -5 );
 			// spotLight.castShadow = true;
@@ -375,8 +358,6 @@
 
 			var sphereSize = 1;
 
-
-
 			// var spotLightHelper = new THREE.SpotLightHelper( spotLight, sphereSize );
 			// scene.add( spotLightHelper );
 
@@ -386,12 +367,12 @@
 			// var pointLightHelper = new THREE.PointLightHelper( light, sphereSize );
 			// scene.add( pointLightHelper );
 
-
-
 			// var pointLightHelper2 = new THREE.PointLightHelper( light2, 0.01 );
 			// scene.add( pointLightHelper2 );
 
 
+			// var dirhelper = new THREE.DirectionalLightHelper( directionalLight, 2 );
+			// scene.add( dirhelper );
 
 			var dirhelperTwo = new THREE.DirectionalLightHelper( directionalLightTwo, 2 );
 			scene.add( dirhelperTwo );
