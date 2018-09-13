@@ -16,11 +16,17 @@
 	<script src="js/three.js"></script>
 	<script src="js/OrbitControls.js"></script>
 	<script src="js/GLTFLoader.js"></script>
+	<script src="js/SVGLoader.js"></script>
+	
+	<script src="js/BokehShader2.js"></script>
+	<script src="js/CinematicCamera.js"></script>
 
 	<script>
 
 		var scene, camera, renderer, mesh;
 		var meshFloor;
+		var meshThree;
+
 
 		var keyboard = {};
 		var player = { height: 1.8, speed: 0.1, turnSpeed: Math.PI * 0.02 };
@@ -29,28 +35,260 @@
 
 			scene = new THREE.Scene();
 			camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+			
+// 			camera = new THREE.CinematicCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );		
 
-			scene.background = new THREE.Color( 0xc9c9c9 );
-
-
+			scene.background = new THREE.Color( 0x4893AA );
+			
+			
 
 
 			// Polygons
 
+			// var ngeometry = new THREE.BoxGeometry( 1, 1, 1 );
+			// var nmaterial = new THREE.MeshBasicMaterial( { color: 0x00ff00, wireframe: true } );
+			// var ncube = new THREE.Mesh( ngeometry, nmaterial );
+			// scene.add( ncube );
 
 
-			// Loader
 
-// 				var loader = new THREE.GLTFLoader();
-// 				loader.load( 'export-1-new.gltf', function ( gltf ) {
-// 					scene.add( gltf.scene );
-// 				}, undefined, function ( e ) {
-// 					console.error( e );
-// 				} );
+			// SVG Loader 
+
+
+
+			// instantiate a loader
+			var svgLoaderCloudOne = new THREE.SVGLoader();
+
+			// load a SVG resource
+			svgLoaderCloudOne.load(
+				// resource URL
+				'images/cloud-1.svg',
+				// called when the resource is loaded
+				function ( paths ) {
+
+					var groupOne = new THREE.Group();
+
+					for ( var i = 0; i < paths.length; i ++ ) {
+
+						var path = paths[ i ];
+
+						var material = new THREE.MeshBasicMaterial( {
+							// color: path.color,
+							color: 0xffffff,
+							side: THREE.DoubleSide,
+							depthWrite: true,
+							opacity: 1,
+							transparent: true
+						} );
+
+						var shapes = path.toShapes( true );
+
+						for ( var j = 0; j < shapes.length; j ++ ) {
+
+							var shape = shapes[ j ];
+							var geometry = new THREE.ShapeBufferGeometry( shape );
+							var mesh = new THREE.Mesh( geometry, material );
+							groupOne.add( mesh );
+
+
+						}
+
+					}
+
+					scene.add( groupOne );
+					groupOne.scale.x = 0.0095;
+					groupOne.scale.y = 0.0095;
+					groupOne.scale.z = 0.0095;
+					groupOne.rotation.x = 180 * ( Math.PI / 180 );
+					groupOne.rotation.y = 90 * ( Math.PI / 180 );
+					groupOne.position.x = 1; 
+					groupOne.position.y = 10;
+
+					function makeNewNumber () {
+
+						requestAnimationFrame(makeNewNumber);
+
+						if ( groupOne.position.z <= 10 ) {
+
+
+							groupOne.position.z += 0.01;
+							material.opacity -= 0.01;
+
+						} else {
+
+							groupOne.position.z = -10;
+							material.opacity = 1;
+
+						}
+
+
+					};
+
+					makeNewNumber();
+					
+
+
+
+				},
+
+			);
+
+
+
+			// instantiate a loader
+			var svgLoaderCloudTwo = new THREE.SVGLoader();
+
+			// load a SVG resource
+			svgLoaderCloudTwo.load(
+				// resource URL
+				'images/cloud-2.svg',
+				// called when the resource is loaded
+				function ( paths ) {
+
+					var group = new THREE.Group();
+
+					for ( var i = 0; i < paths.length; i ++ ) {
+
+						var path = paths[ i ];
+
+						var material = new THREE.MeshBasicMaterial( {
+							// color: path.color,
+							color: 0xffffff,
+							side: THREE.DoubleSide,
+							depthWrite: true,
+							opacity: 0.7,
+							transparent: true
+						} );
+
+						var shapes = path.toShapes( true );
+
+						for ( var j = 0; j < shapes.length; j ++ ) {
+
+							var shape = shapes[ j ];
+							var geometry = new THREE.ShapeBufferGeometry( shape );
+							var mesh = new THREE.Mesh( geometry, material );
+							group.add( mesh );
+
+
+						}
+
+					}
+
+					scene.add( group );
+					group.scale.x = 0.0095;
+					group.scale.y = 0.0095;
+					group.scale.z = 0.0095;
+					group.rotation.x = 180 * ( Math.PI / 180 );
+					group.rotation.y = 90 * ( Math.PI / 180 );
+					group.position.set( 3, 10, 1);
+
+
+
+				},
+				// called when loading is in progresses
+				function ( xhr ) {
+
+					console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+				},
+				// called when loading has errors
+				function ( error ) {
+
+					console.log( 'An error happened' );
+
+				}
+			);
+
+
+			// instantiate a loader
+			var svgLoaderCloudThree = new THREE.SVGLoader();
+
+			// load a SVG resource
+			svgLoaderCloudThree.load(
+				// resource URL
+				'images/cloud-3.svg',
+				// called when the resource is loaded
+				function ( paths ) {
+
+					var group = new THREE.Group();
+
+					for ( var i = 0; i < paths.length; i ++ ) {
+
+						var path = paths[ i ];
+
+						var material = new THREE.MeshBasicMaterial( {
+							// color: path.color,
+							color: 0xffffff,
+							side: THREE.DoubleSide,
+							depthWrite: true,
+							opacity: 0.7,
+							transparent: true
+						} );
+
+						var shapes = path.toShapes( true );
+
+						for ( var j = 0; j < shapes.length; j ++ ) {
+
+							var shape = shapes[ j ];
+							var geometry = new THREE.ShapeBufferGeometry( shape );
+							var meshThree = new THREE.Mesh( geometry, material );
+							group.add( meshThree );
+
+
+						}
+
+					}
+
+					scene.add( group );
+					group.scale.x = 0.0095;
+					group.scale.y = 0.0095;
+					group.scale.z = 0.0095;
+					group.rotation.x = 180 * ( Math.PI / 180 );
+					group.rotation.y = 90 * ( Math.PI / 180 );
+					group.position.set( 5, 10, 3);
+
+
+				},
+				// called when loading is in progresses
+				function ( xhr ) {
+
+					console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+				},
+				// called when loading has errors
+				function ( error ) {
+
+					console.log( 'An error happened' );
+
+				}
+			);
+
+
+
+
+
+
+
+			// End SVG Loader
+
 
 			
 			var loader = new THREE.GLTFLoader();
-			loader.load("bp-scene-4.gltf", function ( gltf ) {
+
+			loader.load("bp_scene_6.gltf", function ( gltf ) {
+
+			scene.scale.x = 2;
+			scene.scale.y = 2;
+			scene.scale.z = 2;
+			    scene.add( gltf.scene );
+
+
+			});
+			
+			
+			var womanLoader = new THREE.GLTFLoader();
+			womanLoader.load("bp_scene_6_woman.gltf", function ( gltf ) {
+
 
 			scene.scale.x = 2;
 			scene.scale.y = 2;
@@ -60,57 +298,94 @@
 
 			});
 
+			
+			var carLoader = new THREE.GLTFLoader();
+			carLoader.load("bp_scene_6_car.gltf", function ( gltf ) {
+
+			scene.scale.x = 2;
+			scene.scale.y = 2;
+			scene.scale.z = 2;
+			    scene.add( gltf.scene );
+
+
+			});
+
+			
 
 			// Camera
 
 			camera.position.set(0, player.height, 25);
 			// camera.lookAt(new THREE.Vector3(0, player.height, 0));
 
+// 				camera.setLens( 5 );
+// 				camera.position.set( 2, 1, 50 );
 
 
 			// Lighting
 
 
 			var directionalLight = new THREE.DirectionalLight( 0xffffff, 1 );
-			directionalLight.position.set( -5, 5, -5 );
+			directionalLight.position.set( -12, 5, -3 );
 			scene.add( directionalLight );
 
-			var light = new THREE.PointLight( 0xffffff, 1.9, 50, 2 );
-			light.position.set( -0.5, 1, 0.5 );
-			scene.add( light );
+			var directionalLightTwo = new THREE.DirectionalLight( 0xffffff, 1 );
+			directionalLightTwo.position.set( -12, 5, 3 );
+			scene.add( directionalLightTwo );
 
-			var light2 = new THREE.PointLight( 0xffffff, 1.3, 50, 2 );
-			light2.position.set( -1, 1, -1 );
-			scene.add( light2 );
+			// var light = new THREE.PointLight( 0xffffff, 1, 0, 2 );
+			// light.position.set( 2, 8, 0.5 );
+			// scene.add( light );
 
-			var spotLight = new THREE.SpotLight( 0xffffff, 0.3 );
-			spotLight.position.set( 5, 10, 5 );
-			spotLight.castShadow = true;
-			spotLight.shadow.mapSize.width = 500;
-			spotLight.shadow.mapSize.height = 500;
-			spotLight.shadow.camera.near = .25;
-			spotLight.shadow.camera.far = 1000;
-			spotLight.shadow.camera.fov = 3;
-			scene.add( spotLight );
+			// var light2 = new THREE.PointLight( 0xffffff, 0.85, 50, 2 );
+			// light2.position.set( -4.55, 0.2, 0.18 );
+			// scene.add( light2 );
+
+
+			var ambLight = new THREE.AmbientLight( 0xffffff, 0.5 ); // soft white light
+			ambLight.position.set( 3, 2, 0 );
+			scene.add( ambLight );
+
+			// var spotLight = new THREE.SpotLight( 0xffffff, 0.3 );
+			// spotLight.position.set( 10, 12, -5 );
+			// spotLight.castShadow = true;
+			// spotLight.shadow.mapSize.width = 500;
+			// spotLight.shadow.mapSize.height = 500;
+			// spotLight.shadow.camera.near = .25;
+			// spotLight.shadow.camera.far = 1000;
+			// spotLight.shadow.camera.fov = 3;
+			// scene.add( spotLight );
 
 
 			var sphereSize = 1;
-			var spotLightHelper = new THREE.SpotLightHelper( spotLight, sphereSize );
-			scene.add( spotLightHelper );
 
-			var pointLightHelper2 = new THREE.PointLightHelper( light2, sphereSize );
-			scene.add( pointLightHelper2 );
+			// var spotLightHelper = new THREE.SpotLightHelper( spotLight, sphereSize );
+			// scene.add( spotLightHelper );
 
-			var pointLightHelper = new THREE.PointLightHelper( light, sphereSize );
-			scene.add( pointLightHelper );
+			// var pointLightHelper2 = new THREE.PointLightHelper( light2, sphereSize );
+			// scene.add( pointLightHelper2 );
 
-			var dirhelper = new THREE.DirectionalLightHelper( directionalLight, 2 );
-			scene.add( dirhelper );
+			// var pointLightHelper = new THREE.PointLightHelper( light, sphereSize );
+			// scene.add( pointLightHelper );
+
+			// var pointLightHelper2 = new THREE.PointLightHelper( light2, 0.01 );
+			// scene.add( pointLightHelper2 );
+
+
+			// var dirhelper = new THREE.DirectionalLightHelper( directionalLight, 2 );
+			// scene.add( dirhelper );
+
+			var dirhelperTwo = new THREE.DirectionalLightHelper( directionalLightTwo, 2 );
+			scene.add( dirhelperTwo );
+
+
+			var axesHelper = new THREE.AxesHelper( 5 );
+			scene.add( axesHelper );
+
 
 
 			// Render 
 
-			renderer = new THREE.WebGLRenderer();
+			renderer = new THREE.WebGLRenderer( { antialias: true } );
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild(renderer.domElement);
 			renderer.shadowMap.enabled = true;
@@ -128,30 +403,36 @@
 
 			});
 
-			animate();
+
 
 			controls = new THREE.OrbitControls( camera, renderer.domElement );
 			controls.maxDistance = 300;
 			controls.enablePan = true;
 			controls.enableRotate = true;
 
+
+
+			function animate() {
+
+				requestAnimationFrame(animate);
+
+				// ncube.rotation.x += 0.01;
+				// ncube.rotation.y += 0.02;
+
+				// ncube.translate.x += 0.09;
+
+				renderer.render(scene, camera);
+
+
+			}
+
+
+			animate();
+
+
 		}
 
-		function animate() {
 
-			requestAnimationFrame(animate);
-
-			// mesh.rotation.x += 0.01;
-			// mesh.rotation.y += 0.02;
-
-			renderer.render(scene, camera);
-
-
-
-
-
-
-		}
 
 		// function keyDown(e) {
 
