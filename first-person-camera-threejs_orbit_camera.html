@@ -13,15 +13,37 @@
 
 </head>
 <body>
+	<div id="theDiv" style="
 
+	display: grid;
+	grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw 10vw;
+	grid-template-rows: 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh 10vh;
+
+	">
+
+		<div id="BG" style=" 
+		grid-column: 9 / 10; 
+		grid-row: 9 / 10; 
+		background-color: orange; 
+		z-index: 20;
+		">
+
+			<button id="start">Start</button>
+			<button id="stop">Stop</button>
+
+
+			
+		</div>
+
+
+		
+	</div>	
 
 	<script src="js/three.js"></script>
 	<script src="js/OrbitControls.js"></script>
 	<script src="js/GLTFLoader.js"></script>
 	<script src="js/SVGLoader.js"></script>
-	
-	<script src="js/BokehShader2.js"></script>
-	<script src="js/CinematicCamera.js"></script>
+
 
 	<script>
 
@@ -378,7 +400,6 @@
 						};
 
 						changeOpacityCloud();						
-
 						requestAnimationFrame(clouds);
 
 
