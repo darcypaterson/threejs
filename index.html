@@ -63,7 +63,7 @@
 				new THREE.MeshPhongMaterial( { color: 0x71c4c9, opacity:0.5, transparent: true, side: THREE.DoubleSide }), // Left Side
 				new THREE.MeshBasicMaterial( { color: 0xc0c971, opacity:0.5, transparent: true, side: THREE.DoubleSide }),  // Top Side
 				new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader().load('images/eye-1.jpg'), side: THREE.DoubleSide }),  // Bottom Side
-				new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader().load(eye2), side: THREE.DoubleSide }),  // Front Side
+				new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader().load(eye2), side: THREE.DoubleSide, alpha: true }),  // Front Side
 				new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader().load(eye3), side: THREE.DoubleSide }) // Back Side
 
 			];
