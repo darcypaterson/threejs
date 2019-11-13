@@ -20,7 +20,7 @@
 
 
 
-			var renderer = new THREE.WebGLRenderer( { alpha: true } );
+			var renderer = new THREE.WebGLRenderer();
 			renderer.setSize( window.innerWidth, window.innerHeight );
 			document.body.appendChild( renderer.domElement );
 
@@ -39,7 +39,7 @@
 
 			});
 
-			var eye2 = 'images/person.png';	
+			var eye2 = 'images/Untitled-1.png';	
 			var eye3 = 'images/eye-3.jpg';
 
 			controls = new THREE.OrbitControls( camera, renderer.domElement );
@@ -63,7 +63,7 @@
 				new THREE.MeshPhongMaterial( { color: 0x71c4c9, opacity:0.5, transparent: true, side: THREE.DoubleSide }), // Left Side
 				new THREE.MeshBasicMaterial( { color: 0xc0c971, opacity:0.5, transparent: true, side: THREE.DoubleSide }),  // Top Side
 				new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader().load('images/eye-1.jpg'), side: THREE.DoubleSide }),  // Bottom Side
-				new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader().load(eye2), side: THREE.DoubleSide, transparent: true, alphaTest: 0.5 }),  // Front Side
+				new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader().load(eye2), side: THREE.DoubleSide }),  // Front Side
 				new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader().load(eye3), side: THREE.DoubleSide }) // Back Side
 
 			];
@@ -99,7 +99,15 @@
 			scene.add(wall);
 
 
+var tree = new THREE.mesh(
+	new THREE.PlaneGeometry(100,50,20,20),
+	new THREE.MeshBasicMaterial( { map: new THREE.TextureLoader().load('images/untitled-8.png'), side: THREE.DoubleSide })
+	);
 
+
+			tree.position.set(2, 2, -2);
+
+			scene.add(tree);
 
 
 
